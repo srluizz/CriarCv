@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home3/jogoscla/criarcv.online/
+    - /bin/cp -R * $DEPLOYPATH
+
+
+
+
