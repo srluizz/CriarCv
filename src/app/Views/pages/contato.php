@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-slate-900">Tempo de resposta</h4>
-                    <p class="text-slate-500">Respondemos em até 24 horas úteis.</p>
+                    <p class="text-slate-500">Respondemos o mais breve possível.</p>
                 </div>
             </div>
         </div>
