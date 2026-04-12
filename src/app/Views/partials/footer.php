@@ -12,8 +12,9 @@
             <div>
                 <h4 class="text-white font-semibold mb-4">Links Úteis</h4>
                 <ul class="space-y-2">
-                    <li><a href="/gerador" class="hover:text-white transition">Gerador de CV</a></li>
+                    <li><a href="/gerador" class="hover:text-white transition">Gerar Currículo</a></li>
                     <li><a href="/contato" class="hover:text-white transition">Contato</a></li>
+                    <li><a href="/colaborar" class="hover:text-white transition">Apoie o Projeto</a></li>
                 </ul>
             </div>
             <div>

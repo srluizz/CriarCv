@@ -10,11 +10,11 @@ $pages = [
     'home' => [
         'view' => 'home.php',
         'title' => 'Criar Currículo Online Grátis | Moderno e Profissional',
-        'desc'  => 'Crie seu currículo em minutos com visualização em tempo real. Modelos modernos aprovados por recrutadores.'
+        'desc'  => 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'
     ],
     'gerador' => [
         'view' => 'editor.php',
-        'title' => 'Editor de Currículo em Tempo Real | CriarCV.online',
+        'title' => 'Editor de Currículo Grátis | CriarCV.online',
         'desc'  => 'Preencha seus dados e veja seu currículo ser montado instantaneamente. Baixe em PDF.'
     ],
     'termos' => [
@@ -31,6 +31,11 @@ $pages = [
         'view' => 'contato.php',
         'title' => 'Fale Conosco | CriarCV.online',
         'desc'  => 'Dúvidas ou sugestões? Entre em contato com a equipe do CriarCV.'
+    ],
+    'colaborar' => [
+        'view' => 'colaborar.php',
+        'title' => 'Apoie o Projeto | CriarCV.online',
+        'desc'  => 'Gostou do gerador? Considere fazer uma doação para mantermos o projeto gratuito e online.'
     ]
 ];
 
