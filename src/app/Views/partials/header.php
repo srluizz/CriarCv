@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
     
     <title><?php echo $pageTitle ?? 'CriarCV.online | Currículo Profissional em Minutos'; ?></title>
     <meta name="description" content="<?php echo $pageDesc ?? 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'; ?>">
