@@ -1,5 +1,3 @@
-/vendor/
-composer.lock
 # Arquivos Temporarios do Dompdf
 /public/assets/fonts/
 /public/assets/cache/
