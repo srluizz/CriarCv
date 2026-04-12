@@ -370,7 +370,9 @@ function copyPix() {
             btn.classList.replace('bg-green-600', 'bg-blue-600');
             btnText.innerHTML = originalContent;
         }, 2500);
-    });
+    }).catch(err => {
+    alert("Não foi possível copiar automaticamente. Por favor, selecione o texto e copie manualmente.");
+});
 }
 
 window.onload = () => {

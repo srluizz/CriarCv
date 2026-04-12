@@ -9,6 +9,39 @@
     <meta name="author" content="CriarCV.online">
     <link rel="canonical" href="https://criarcv.online<?php echo $_SERVER['REQUEST_URI']; ?>">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://criarcv.online/">
+    <meta property="og:title" content="<?php echo $pageTitle ?? 'CriarCV.online | Currículo Profissional em Minutos'; ?>">
+    <meta property="og:description" content="<?php echo $pageDesc ?? 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF.'; ?>">
+    <meta property="og:image" content="https://criarcv.online/assets/img/preview-site.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://criarcv.online/">
+    <meta property="twitter:title" content="<?php echo $pageTitle ?? 'CriarCV.online | Currículo Profissional'; ?>">
+    <meta property="twitter:description" content="<?php echo $pageDesc ?? 'Gere seu currículo profissional em PDF gratuitamente.'; ?>">
+    <meta property="twitter:image" content="https://criarcv.online/assets/img/preview-site.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CriarCV.online",
+      "url": "https://criarcv.online",
+      "description": "Gerador de currículo profissional gratuito com visualização em tempo real e exportação para PDF.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "CriarCV.online"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
