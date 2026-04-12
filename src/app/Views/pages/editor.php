@@ -15,6 +15,49 @@
     </div>
 </div>
 
+<div id="pix-modal" class="hidden fixed inset-0 bg-slate-900/95 backdrop-blur-xl z-[10000] flex items-center justify-center p-4">
+    <div class="bg-white rounded-[3rem] p-8 md:p-12 max-w-md w-full text-center shadow-2xl transform transition-all scale-95 opacity-0 duration-300" id="pix-content">
+        
+        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        
+        <h2 class="text-3xl font-black text-slate-900 tracking-tighter mb-2">Currículo Gerado!</h2>
+        <p class="text-slate-500 font-medium mb-8 text-sm">Se o site te ajudou a poupar tempo, considere contribuir com um cafezinho para manter o projeto online. ☕</p>
+
+        <div class="bg-slate-50 p-6 rounded-[2rem] border-2 border-dashed border-slate-200 mb-8 flex flex-col items-center">
+            
+            <img src="assets/img/pix-qrcode.png" alt="QR Code Pix" class="mb-4 rounded-2xl shadow-sm border-4 border-white bg-white w-48 h-48 object-contain">
+
+            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-2 text-center">Chave Aleatória</span>
+            
+            <div class="bg-white px-4 py-3 rounded-xl border border-slate-100 w-full mb-1">
+                <p class="text-[10px] font-bold text-blue-600 break-all select-all text-center leading-relaxed" id="pix-key">
+                    5c25a6d0-dbc1-4e45-86be-879b3c6405ea
+                </p>
+            </div>
+            <p class="text-[9px] text-slate-400 italic">Clique no botão abaixo para copiar</p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            <button id="btn-copy-pix" onclick="copyPix()" class="bg-blue-600 text-white py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all flex items-center justify-center gap-2 relative overflow-hidden group">
+                <span id="btn-copy-text" class="flex items-center gap-2">
+                    <svg class="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                    </svg>
+                    COPIAR CHAVE PIX
+                </span>
+            </button>
+            
+            <button onclick="closePixModal()" class="text-slate-400 font-bold text-sm hover:text-slate-600 transition-colors py-2">
+                Fechar e continuar
+            </button>
+        </div>
+    </div>
+</div>
+
 <div class="bg-[#F8FAFC] min-h-screen pb-20">
     <div class="container mx-auto px-4 py-10 max-w-[1400px] print:p-0">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start print:block">
@@ -252,6 +295,8 @@ function renderOutputList(type) {
 async function exportarServidor(formato) {
     const overlay = document.getElementById('loading-overlay');
     const progressBar = document.getElementById('progress-bar');
+    const pixModal = document.getElementById('pix-modal');
+    const pixContent = document.getElementById('pix-content');
     
     overlay.classList.remove('hidden');
     setTimeout(() => progressBar.style.width = '40%', 100);
@@ -275,18 +320,57 @@ async function exportarServidor(formato) {
             a.download = `meu-curriculo.pdf`;
             a.click();
             
+            // AGORA A MÁGICA:
             setTimeout(() => {
-                overlay.classList.add('hidden');
+                overlay.classList.add('hidden'); // Esconde o carregamento
                 progressBar.style.width = '0%';
-            }, 1000);
+                
+                // Abre o Modal do Pix
+                pixModal.classList.remove('hidden');
+                setTimeout(() => {
+                    pixContent.classList.remove('scale-95', 'opacity-0');
+                    pixContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }, 1200);
+
         } else {
-            alert("Ocorreu um problema ao gerar seu arquivo. Tente novamente.");
+            alert("Erro ao gerar PDF.");
             overlay.classList.add('hidden');
         }
     } catch (e) {
-        alert("Erro de conexão. Verifique sua internet.");
+        alert("Erro de conexão.");
         overlay.classList.add('hidden');
     }
+}
+
+// Funções Auxiliares
+function closePixModal() {
+    const pixModal = document.getElementById('pix-modal');
+    pixModal.classList.add('hidden');
+}
+
+function copyPix() {
+    const key = document.getElementById('pix-key').innerText.trim();
+    const btn = document.getElementById('btn-copy-pix');
+    const btnText = document.getElementById('btn-copy-text');
+
+    navigator.clipboard.writeText(key).then(() => {
+        const originalContent = btnText.innerHTML;
+        
+        // Feedback Visual
+        btn.classList.replace('bg-blue-600', 'bg-green-600');
+        btnText.innerHTML = `
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+            CHAVE COPIADA!
+        `;
+
+        setTimeout(() => {
+            btn.classList.replace('bg-green-600', 'bg-blue-600');
+            btnText.innerHTML = originalContent;
+        }, 2500);
+    });
 }
 
 window.onload = () => {
