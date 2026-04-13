@@ -35,22 +35,22 @@ return [
 
     // Seção de Modelos
     'modelos' => [
-        'view'  => 'modelos.php',
+        'view'  => 'modelos/modelos.php',
         'title' => 'Modelos de Currículo Profissionais Grátis | CriarCV.online',
         'desc'  => 'Escolha entre nossos modelos de currículo otimizados: Primeiro Emprego, Jovem Aprendiz, Auxiliar Administrativo e muito mais.'
     ],
     'modelos/curriculo-primeiro-emprego' => [
-        'view'  => 'primeiro-emprego.php',
+        'view'  => 'modelos/primeiro-emprego.php',
         'title' => 'Modelo de Currículo para Primeiro Emprego Grátis | CriarCV.online',
         'desc'  => 'Procurando seu primeiro emprego? Use nosso modelo otimizado e baixe em PDF.'
     ],
     'modelos/curriculo-auxiliar-administrativo' => [
-        'view'  => 'auxiliar-administrativo.php',
+        'view'  => 'modelos/auxiliar-administrativo.php',
         'title' => 'Modelo de Currículo Auxiliar Administrativo 2026 | Grátis',
         'desc'  => 'Baixe o modelo de currículo para auxiliar administrativo perfeito. Veja habilidades mais buscadas e exporte em PDF.'
     ],
     'modelos/curriculo-jovem-aprendiz' => [
-        'view'  => 'jovem-aprendiz.php',
+        'view'  => 'modelos/jovem-aprendiz.php',
         'title' => 'Modelo de Currículo Jovem Aprendiz 2026 | Grátis em PDF',
         'desc'  => 'Crie seu currículo de Jovem Aprendiz em minutos. Guia completo e modelo pronto para baixar.'
     ]
