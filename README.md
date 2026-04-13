@@ -14,6 +14,9 @@ https://criarcv.online
 ### Editor com Live Preview
 ![Editor do CriarCV.online](https://img.lightshot.app/RJPHSvT8TJC-q931TOSBAQ.png)
 
+### PDF Gerado com o editor
+![PDF do CriarCV.online](https://img.lightshot.app/P5UbSKP_RVWAJLOIhTLYzQ.jpg)
+
 ## 📝 Descrição do Projeto
 
 O CriarCV.online é uma ferramenta web desenvolvida para auxiliar candidatos na criação de currículos modernos e bem estruturados. O sistema utiliza uma arquitetura baseada em PHP para o processamento de arquivos e JavaScript para a interatividade do editor, garantindo uma experiência de usuário fluida e segura.
