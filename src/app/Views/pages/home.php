@@ -23,7 +23,7 @@
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-            <a href="/gerador" class="group relative bg-slate-900 text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-blue-600 transition-all shadow-2xl flex items-center justify-center overflow-hidden">
+            <a href="<?= BASE_URL ?>/gerador" class="group relative bg-slate-900 text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-blue-600 transition-all shadow-2xl flex items-center justify-center overflow-hidden">
                 <span class="relative z-10 flex items-center">
                     Criar Meu Currículo Grátis
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -200,7 +200,7 @@
             </h2>
             <p class="text-blue-100 text-xl mb-12 max-w-2xl mx-auto relative z-10 font-medium">Junte-se a milhares de profissionais que já mudaram de vida com um currículo de alto impacto.</p>
             
-            <a href="/gerador" class="relative z-10 inline-flex items-center gap-3 bg-white text-blue-600 px-14 py-6 rounded-3xl text-2xl font-black hover:bg-slate-100 transition-all transform hover:scale-105 shadow-2xl">
+            <a href="<?= BASE_URL ?>/gerador" class="relative z-10 inline-flex items-center gap-3 bg-white text-blue-600 px-14 py-6 rounded-3xl text-2xl font-black hover:bg-slate-100 transition-all transform hover:scale-105 shadow-2xl">
                 Gerar Currículo Grátis
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
