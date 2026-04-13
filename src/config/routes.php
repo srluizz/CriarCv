@@ -53,5 +53,15 @@ return [
         'view'  => 'modelos/jovem-aprendiz.php',
         'title' => 'Modelo de Currículo Jovem Aprendiz 2026 | Grátis em PDF',
         'desc'  => 'Crie seu currículo de Jovem Aprendiz em minutos. Guia completo e modelo pronto para baixar.'
-    ]
+    ],
+    'modelos/curriculo-vendedor' => [
+    'view'  => 'modelos/vendedor.php',
+    'title' => 'Modelo de Currículo para Vendedor 2026 | Grátis em PDF',
+    'desc'  => 'Baixe agora o melhor modelo de currículo para vendedor. Dicas de especialistas, habilidades de vendas e exemplo pronto.'
+    ],
+    'modelos/curriculo-recepcionista' => [
+    'view'  => 'modelos/recepcionista.php',
+    'title' => 'Modelo de Currículo para Recepcionista 2026 | Baixe em PDF',
+    'desc'  => 'Confira o melhor modelo de currículo para recepcionista. Exemplos prontos, habilidades essenciais e dicas para clínicas, hotéis e recepção comercial.'
+],
 ];
