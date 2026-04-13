@@ -2,43 +2,47 @@
 
 header("Content-Type: application/xml; charset=utf-8");
 
-$base_url = "https://criarcv.online/"; 
+$base_url = "https://criarcv.online"; 
 
+$pages = require_once __DIR__ . '/../src/config/routes.php';
 
-$paginas_estaticas = [
-    ""            => ["priority" => "1.0", "changefreq" => "daily"],
-    "gerador"     => ["priority" => "0.9", "changefreq" => "monthly"],
-    "colaborar"   => ["priority" => "0.7", "changefreq" => "monthly"],
-    "contato"     => ["priority" => "0.5", "changefreq" => "monthly"],
-    "privacidade" => ["priority" => "0.3", "changefreq" => "monthly"],
-    "termos"      => ["priority" => "0.3", "changefreq" => "monthly"],
-    "modelos"     => ["priority" => "0.8", "changefreq" => "weekly"],
-];
-
-$modelos_seo = [
-    "modelos/curriculo-primeiro-emprego",
-    "modelos/curriculo-jovem-aprendiz",
-    "modelos/curriculo-auxiliar-administrativo"
+$config_especifica = [
+    "home"        => ["slug" => "", "priority" => "1.0", "changefreq" => "daily"],
+    "gerador"     => ["slug" => "gerador", "priority" => "0.9", "changefreq" => "monthly"],
+    "modelos"     => ["slug" => "modelos", "priority" => "0.8", "changefreq" => "weekly"],
+    "privacidade" => ["slug" => "privacidade", "priority" => "0.3", "changefreq" => "monthly"],
+    "termos"      => ["slug" => "termos", "priority" => "0.3", "changefreq" => "monthly"],
 ];
 
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
-foreach ($paginas_estaticas as $slug => $config) {
-    echo '<url>';
-    echo '<loc>' . $base_url . $slug . '</loc>';
-    echo '<lastmod>' . date('Y-m-d') . '</lastmod>';
-    echo '<changefreq>' . $config['changefreq'] . '</changefreq>';
-    echo '<priority>' . $config['priority'] . '</priority>';
-    echo '</url>';
-}
+foreach ($pages as $slug => $info) {
+    
+    $url_final = ($slug === 'home') ? $base_url . "/" : $base_url . "/" . $slug;
+    
+    $priority = "0.5";
+    $changefreq = "monthly";
 
-foreach ($modelos_seo as $slug) {
+    if (str_starts_with($slug, 'modelos/curriculo-')) {
+        $priority = "0.7";
+        $changefreq = "weekly";
+    }
+
+    if (isset($config_especifica[$slug])) {
+        $conf = $config_especifica[$slug];
+        $url_final = $base_url . "/" . $conf['slug'];
+        $priority = $conf['priority'];
+        $changefreq = $conf['changefreq'];
+    }
+    $arquivo_view = __DIR__ . '/../src/app/Views/pages/' . $info['view'];
+    $lastmod = file_exists($arquivo_view) ? date("Y-m-d", filemtime($arquivo_view)) : date('Y-m-d');
+
     echo '<url>';
-    echo '<loc>' . $base_url . $slug . '</loc>';
-    echo '<lastmod>' . date('Y-m-d') . '</lastmod>';
-    echo '<changefreq>weekly</changefreq>';
-    echo '<priority>0.7</priority>';
+    echo '<loc>' . htmlspecialchars($url_final) . '</loc>';
+    echo '<lastmod>' . $lastmod . '</lastmod>';
+    echo '<changefreq>' . $changefreq . '</changefreq>';
+    echo '<priority>' . $priority . '</priority>';
     echo '</url>';
 }
 
