@@ -63,5 +63,15 @@ return [
     'view'  => 'modelos/recepcionista.php',
     'title' => 'Modelo de Currículo para Recepcionista 2026 | Baixe em PDF',
     'desc'  => 'Confira o melhor modelo de currículo para recepcionista. Exemplos prontos, habilidades essenciais e dicas para clínicas, hotéis e recepção comercial.'
-],
+    ],
+    'modelos/curriculo-atendente-de-farmacia' => [
+        'view'  => 'modelos/farmacia.php',
+        'title' => 'Modelo de Currículo para Atendente de Farmácia 2026 | Baixe em PDF',
+        'desc'  => 'Baixe grátis o melhor modelo de currículo para atendente de farmácia. Destaque habilidades técnicas, cursos e atendimento farmacêutico.'
+    ],
+    'modelos/curriculo-motorista' => [
+        'view'  => 'modelos/motorista.php',
+        'title' => 'Modelo de Currículo para Motorista e Entregador | PDF Grátis',
+        'desc'  => 'Crie seu currículo de motorista em minutos. Modelo ideal para motoristas de categoria B, C, D, motoboys e entregadores.'
+    ],
 ];

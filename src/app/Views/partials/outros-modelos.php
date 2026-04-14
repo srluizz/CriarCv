@@ -40,7 +40,6 @@ foreach ($arquivosFisicos as $caminho) {
     }
 }
 
-// Embaralha para variar o SEO interno e limita a 6
 shuffle($modelosParaExibir);
 $exibirAgora = array_slice($modelosParaExibir, 0, 6);
 ?>
