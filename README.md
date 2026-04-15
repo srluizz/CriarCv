@@ -9,7 +9,7 @@ https://criarcv.online
 ## 📸 Preview da Interface
 
 ### Home Page
-![Home Page do CriarCV.online](public/assets/img/preview-site.jpg)
+![Home Page do CriarCV.online](public/assets/img/preview-home.webp)
 
 ### Editor com Live Preview
 ![Editor do CriarCV.online](https://img.lightshot.app/RJPHSvT8TJC-q931TOSBAQ.png)
