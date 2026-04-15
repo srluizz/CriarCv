@@ -150,10 +150,12 @@
                         </section>
 
                         <div class="pt-10">
-                            <button onclick="exportarServidor('pdf')" class="w-full group relative bg-gradient-to-r from-slate-900 to-slate-800 text-white py-6 rounded-[2rem] font-black text-xl hover:from-blue-700 hover:to-blue-600 transition-all shadow-2xl shadow-blue-200/50 flex items-center justify-center gap-4 overflow-hidden">
+                            <button onclick="if(typeof fbq === 'function') { fbq('track', 'CompleteRegistration'); } exportarServidor('pdf')" class="w-full group relative bg-gradient-to-r from-slate-900 to-slate-800 text-white py-6 rounded-[2rem] font-black text-xl hover:from-blue-700 hover:to-blue-600 transition-all shadow-2xl shadow-blue-200/50 flex items-center justify-center gap-4 overflow-hidden">
                                 <span class="relative z-10 flex items-center gap-3">
                                     BAIXAR MEU PDF PROFISSIONAL
-                                    <svg class="w-6 h-6 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    <svg class="w-6 h-6 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                    </svg>
                                 </span>
                                 <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
                             </button>
