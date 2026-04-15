@@ -40,7 +40,11 @@
     <meta property="twitter:image" content="<?= BASE_URL ?>/assets/img/preview-site.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
@@ -75,7 +79,7 @@
                 <a href="<?= BASE_URL ?>/colaborar" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Apoie o Projeto</a>
             </nav>
 
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600">
+            <button onclick="toggleMobileMenu()" aria-label="Abrir menu de navegação class="md:hidden p-2 text-slate-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
