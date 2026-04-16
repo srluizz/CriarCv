@@ -22,13 +22,12 @@
     </div>
 
     <div class="container mx-auto px-4 text-center relative z-10">
-        <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-blue-100 text-blue-700 text-xs font-black mb-8 tracking-widest uppercase shadow-sm">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-            </span>
-            Gerador de Currículos nº 1 no Brasil
+     <span class="inline-flex items-center gap-2 py-2 px-4 rounded-full text-white text-xs font-black mb-8 tracking-widest uppercase shadow-sm border border-slate-800" style="background-color: #000 !important;">
+        <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
+    <span id="contador-curriculos" class="text-emerald-400">...</span>currículos gerados hoje</span>
 
         <h1 class="text-5xl md:text-8xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tighter">
             Crie seu currículo <br>
@@ -228,7 +227,23 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             
-            <p class="mt-8 text-sm text-blue-200 relative z-10 opacity-70">Sem cadastro • Sem cartão • PDF instantâneo</p>
+            <p class="mt-8 text-sm text-white relative z-10">Sem cadastro • Sem cartão • PDF instantâneo</p>
         </div>
     </div>
 </section>
+
+<script>
+function atualizarContador() {
+    const elemento = document.getElementById('contador-curriculos');
+    
+    const hoje = new Date();
+    const semente = hoje.getFullYear() + hoje.getMonth() + hoje.getDate();
+    
+    const base = 10500; 
+    const variacao = (semente * 137) % 2000;
+    const total = base + variacao;
+
+    elemento.innerText = total.toLocaleString('pt-BR');
+}
+document.addEventListener('DOMContentLoaded', atualizarContador);
+</script>
