@@ -1,3 +1,11 @@
 # Arquivos Temporarios do Dompdf
 /public/assets/fonts/
 /public/assets/cache/
+
+#Tailwind
+public/assets/css/input.css
+tailwindcss-windows-x64.exe
+tailwind.exe
+tailwind.config.js
+.tailwindcss/
+notas.txt

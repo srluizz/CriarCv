@@ -1,7 +1,11 @@
 <?php
 
 session_start();
-define('BASE_URL', 'https://criarcv.online');
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    define('BASE_URL', 'http://localhost/public');
+} else {
+    define('BASE_URL', 'https://criarcv.online');
+}
 
 $pages = require_once '../src/config/routes.php';
 
