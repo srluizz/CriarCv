@@ -357,7 +357,7 @@ function copyPix() {
     const btnText = document.getElementById('btn-copy-text');
 
     if (typeof fbq === 'function') {
-        fbq('track', 'Contact', { content_name: 'Apoio Pix Cafezinho' });
+        fbq('track', 'Donate', { content_name: 'Apoio Pix Cafezinho' });
     }
 
     navigator.clipboard.writeText(key).then(() => {
