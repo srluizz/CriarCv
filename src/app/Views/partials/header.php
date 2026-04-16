@@ -7,11 +7,9 @@
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css"> -->
   
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" media="print" onload="this.media='all'">
 
     <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
     <title><?php echo $pageTitle ?? 'CriarCV.online | Currículo Profissional em Minutos'; ?></title>
