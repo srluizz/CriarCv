@@ -300,6 +300,7 @@ async function exportarServidor(formato) {
     const pixModal = document.getElementById('pix-modal');
     const pixContent = document.getElementById('pix-content');
     
+    // 1. Inicia o feedback visual para o usuário
     overlay.classList.remove('hidden');
     setTimeout(() => progressBar.style.width = '40%', 100);
     setTimeout(() => progressBar.style.width = '85%', 800);
@@ -307,6 +308,7 @@ async function exportarServidor(formato) {
     const html = document.getElementById('cv-preview').innerHTML;
     
     try {
+        // 2. Envia os dados para o seu exportar.php
         const response = await fetch('exportar.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -314,7 +316,19 @@ async function exportarServidor(formato) {
         });
         
         if(response.ok) {
+            // --- ADIÇÃO DO ANALYTICS ---
+            // Só dispara se o PHP processou e devolveu o PDF com sucesso
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_pdf', {
+                    'event_category': 'conversion',
+                    'event_label': 'Download de Currículo'
+                });
+            }
+            // ---------------------------
+
             progressBar.style.width = '100%';
+            
+            // 3. Recebe o PDF e inicia o download no navegador
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
@@ -322,12 +336,11 @@ async function exportarServidor(formato) {
             a.download = `meu-curriculo.pdf`;
             a.click();
             
-            // AGORA A MÁGICA:
+            // 4. Finaliza o loading e abre o modal de agradecimento (Pix)
             setTimeout(() => {
-                overlay.classList.add('hidden'); // Esconde o carregamento
+                overlay.classList.add('hidden');
                 progressBar.style.width = '0%';
-                
-                // Abre o Modal do Pix
+
                 pixModal.classList.remove('hidden');
                 setTimeout(() => {
                     pixContent.classList.remove('scale-95', 'opacity-0');
@@ -336,11 +349,12 @@ async function exportarServidor(formato) {
             }, 1200);
 
         } else {
-            alert("Erro ao gerar PDF.");
+            alert("Erro ao gerar PDF. Tente novamente.");
             overlay.classList.add('hidden');
         }
     } catch (e) {
-        alert("Erro de conexão.");
+        console.error("Erro na exportação:", e);
+        alert("Erro de conexão com o servidor.");
         overlay.classList.add('hidden');
     }
 }
@@ -363,7 +377,7 @@ function copyPix() {
     navigator.clipboard.writeText(key).then(() => {
         const originalContent = btnText.innerHTML;
         
-        // Feedback Visual
+        
         btn.classList.replace('bg-blue-600', 'bg-green-600');
         btnText.innerHTML = `
             <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
