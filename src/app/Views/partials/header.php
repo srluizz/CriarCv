@@ -17,6 +17,16 @@
     <meta name="author" content="CriarCV.online">
     <link rel="canonical" href="<?= BASE_URL ?><?php echo $_SERVER['REQUEST_URI']; ?>">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CF9Z9PPDS"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7CF9Z9PPDS');
+    </script>
+
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
