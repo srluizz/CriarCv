@@ -16,7 +16,8 @@
     <meta name="description" content="<?php echo $pageDesc ?? 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'; ?>">
     <meta name="author" content="CriarCV.online">
     <link rel="canonical" href="<?= BASE_URL ?><?php echo $_SERVER['REQUEST_URI']; ?>">
-
+    <meta name="facebook-domain-verification" content="oqswnugiwkqjcqy33uc6ir0w7bzfs4" />
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CF9Z9PPDS"></script>
     <script>
@@ -40,6 +41,8 @@
     fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1294733918949826&ev=PageView&noscript=1" /></noscript>
+
+    
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= BASE_URL ?>/">
