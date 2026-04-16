@@ -74,4 +74,24 @@ return [
         'title' => 'Modelo de Currículo para Motorista e Entregador | PDF Grátis',
         'desc'  => 'Crie seu currículo de motorista em minutos. Modelo ideal para motoristas de categoria B, C, D, motoboys e entregadores.'
     ],
+    'modelos/curriculo-operador-de-caixa' => [
+    'view'  => 'modelos/operador-caixa.php',
+    'title' => 'Modelo de Currículo para Operador de Caixa 2026 | PDF Grátis',
+    'desc'  => 'Confira o melhor modelo de currículo para operador de caixa. Exemplos de habilidades, objetivos e dicas para se destacar no varejo.'
+    ],
+    'modelos/curriculo-servicos-gerais' => [
+    'view'  => 'modelos/servicos-gerais.php',
+    'title' => 'Modelo de Currículo para Serviços Gerais e Limpeza | Baixe em PDF',
+    'desc'  => 'Crie seu currículo para auxiliar de serviços gerais e limpeza. Modelo pronto com habilidades, objetivos e dicas de conservação predial.'
+    ],
+    'modelos/curriculo-estagio' => [
+    'view'  => 'modelos/estagio.php',
+    'title' => 'Modelo de Currículo para Estágio 2026 | Baixe em PDF',
+    'desc'  => 'Aprenda como fazer um currículo de estágio imbatível. Baixe o modelo ideal para estudantes, com dicas de objetivos e projetos acadêmicos.'
+    ],
+    'modelos/curriculo-vigilante-e-porteiro' => [
+    'view'  => 'modelos/vigilante.php',
+    'title' => 'Modelo de Currículo para Vigilante e Porteiro 2026 | Baixe em PDF',
+    'desc'  => 'Confira o melhor modelo de currículo para vigilante e porteiro. Exemplos prontos com cursos de formação, habilidades e dicas de segurança patrimonial.'
+    ],
 ];
