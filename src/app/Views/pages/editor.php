@@ -356,6 +356,10 @@ function copyPix() {
     const btn = document.getElementById('btn-copy-pix');
     const btnText = document.getElementById('btn-copy-text');
 
+    if (typeof fbq === 'function') {
+        fbq('track', 'Contact', { content_name: 'Apoio Pix Cafezinho' });
+    }
+
     navigator.clipboard.writeText(key).then(() => {
         const originalContent = btnText.innerHTML;
         
