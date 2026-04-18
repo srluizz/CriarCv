@@ -4,12 +4,12 @@ return [
     // Páginas Institucionais e Principais
     'home' => [
         'view'  => 'home.php',
-        'title' => 'Criar e Editar Currículo Grátis | Baixar Em PDF',
-        'desc'  => 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'
+        'title' => 'Criar e Editar Currículo Grátis | Baixe Em PDF Grátis!',
+        'desc'  => 'Crie e edite seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'
     ],
     'gerador' => [
         'view'  => 'editor.php',
-        'title' => 'Editor de Currículo Grátis | CriarCV.online',
+        'title' => 'Editor de Currículo Grátis | Baixe Em PDF Grátis!',
         'desc'  => 'Preencha seus dados e veja seu currículo ser montado instantaneamente. Baixe em PDF.'
     ],
     'termos' => [
