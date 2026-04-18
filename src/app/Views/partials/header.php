@@ -58,7 +58,7 @@
     <meta property="twitter:url" content="<?= BASE_URL ?>/">
     <meta property="twitter:title" content="<?php echo $pageTitle ?? 'CriarCV.online'; ?>">
     <meta property="twitter:description" content="<?php echo $pageDesc ?? 'Gere seu currículo profissional gratuitamente.'; ?>">
-    <meta property="twitter:image" content="<?= BASE_URL ?>/assets/img/preview-site.jpg">
+    <meta property="twitter:image" content="<?= BASE_URL ?>/public/assets/img/preview-site.jpg">
 
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
