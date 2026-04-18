@@ -15,7 +15,7 @@ $posicao = 1;
 
 <main class="container mx-auto px-4 py-16">
     <header class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4"><?= $pageTitle ?></h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Modelos de Currículo Para Você Se Inspirar</h1>
         <p class="text-lg text-slate-600 max-w-2xl mx-auto">
             Selecione o modelo ideal para o seu momento de carreira. Todos os nossos modelos são aceitos por sistemas de RH e otimizados para leitura digital.
         </p>
