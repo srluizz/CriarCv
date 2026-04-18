@@ -4,7 +4,7 @@ return [
     // Páginas Institucionais e Principais
     'home' => [
         'view'  => 'home.php',
-        'title' => 'Criar Currículo Online Grátis | Moderno e Profissional',
+        'title' => 'Criar e Editar Currículo Grátis | Baixar Em PDF',
         'desc'  => 'Crie seu currículo online gratuitamente com visualização em tempo real e download em PDF otimizado para sistemas de RH.'
     ],
     'gerador' => [
