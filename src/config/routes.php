@@ -36,62 +36,62 @@ return [
     // Seção de Modelos
     'modelos' => [
         'view'  => 'modelos/modelos.php',
-        'title' => 'Modelos de Currículo Profissionais Grátis | CriarCV.online',
-        'desc'  => 'Escolha entre nossos modelos de currículo otimizados: Primeiro Emprego, Jovem Aprendiz, Auxiliar Administrativo e muito mais.'
+        'title' => 'Modelos de Currículo Prontos e Grátis | Baixe em PDF 2026',
+        'desc'  => 'Encontre os melhores modelos de currículo profissionais 100% grátis. Escolha seu modelo, preencha e baixe em PDF: Primeiro Emprego, Vendas e mais.'
     ],
     'modelos/curriculo-primeiro-emprego' => [
         'view'  => 'modelos/primeiro-emprego.php',
-        'title' => 'Modelo de Currículo para Primeiro Emprego Grátis | CriarCV.online',
-        'desc'  => 'Procurando seu primeiro emprego? Use nosso modelo otimizado e baixe em PDF.'
+        'title' => 'Currículo para Primeiro Emprego Grátis | Baixe em PDF',
+        'desc'  => 'Não tem experiência? Use nosso modelo de currículo para primeiro emprego grátis. Dicas exclusivas para destacar suas habilidades e baixar em PDF.'
     ],
     'modelos/curriculo-auxiliar-administrativo' => [
         'view'  => 'modelos/auxiliar-administrativo.php',
-        'title' => 'Modelo de Currículo Auxiliar Administrativo 2026 | Grátis',
-        'desc'  => 'Baixe o modelo de currículo para auxiliar administrativo perfeito. Veja habilidades mais buscadas e exporte em PDF.'
+        'title' => 'Currículo para Auxiliar Administrativo Grátis | Baixe em PDF',
+        'desc'  => 'Baixe o modelo de currículo para auxiliar administrativo perfeito. Otimizado para RH, com habilidades mais buscadas e pronto para exportar em PDF.'
     ],
     'modelos/curriculo-jovem-aprendiz' => [
         'view'  => 'modelos/jovem-aprendiz.php',
-        'title' => 'Modelo de Currículo Jovem Aprendiz 2026 | Grátis em PDF',
-        'desc'  => 'Crie seu currículo de Jovem Aprendiz em minutos. Guia completo e modelo pronto para baixar.'
+        'title' => 'Currículo para Jovem Aprendiz 2026 | Grátis em PDF',
+        'desc'  => 'Crie seu currículo de Jovem Aprendiz em minutos. Guia completo com modelo pronto para baixar e dicas de como conseguir sua primeira vaga.'
     ],
     'modelos/curriculo-vendedor' => [
-    'view'  => 'modelos/vendedor.php',
-    'title' => 'Modelo de Currículo para Vendedor 2026 | Grátis em PDF',
-    'desc'  => 'Baixe agora o melhor modelo de currículo para vendedor. Dicas de especialistas, habilidades de vendas e exemplo pronto.'
+        'view'  => 'modelos/vendedor.php',
+        'title' => 'Currículo para Vendedor e Balconista Grátis | Baixe em PDF',
+        'desc'  => 'Melhore suas vendas já no currículo! Baixe nosso modelo de currículo para vendedor com foco em resultados, metas e habilidades comerciais.'
     ],
     'modelos/curriculo-recepcionista' => [
-    'view'  => 'modelos/recepcionista.php',
-    'title' => 'Modelo de Currículo para Recepcionista 2026 | Baixe em PDF',
-    'desc'  => 'Confira o melhor modelo de currículo para recepcionista. Exemplos prontos, habilidades essenciais e dicas para clínicas, hotéis e recepção comercial.'
+        'view'  => 'modelos/recepcionista.php',
+        'title' => 'Currículo para Recepcionista Grátis | Baixe em PDF!',
+        'desc'  => 'Modelo de currículo para recepcionista pronto para baixar. Ideal para clínicas, hotéis e recepção comercial. Habilidades essenciais inclusas.'
     ],
     'modelos/curriculo-atendente-de-farmacia' => [
         'view'  => 'modelos/farmacia.php',
-        'title' => 'Modelo de Currículo para Atendente de Farmácia 2026 | Baixe em PDF',
-        'desc'  => 'Baixe grátis o melhor modelo de currículo para atendente de farmácia. Destaque habilidades técnicas, cursos e atendimento farmacêutico.'
+        'title' => 'Currículo para Atendente de Farmácia Grátis | Baixe em PDF',
+        'desc'  => 'Baixe o melhor modelo de currículo para atendente de farmácia. Destaque seus cursos, habilidades técnicas e atendimento ao cliente de forma profissional.'
     ],
     'modelos/curriculo-motorista' => [
         'view'  => 'modelos/motorista.php',
-        'title' => 'Modelo de Currículo para Motorista e Entregador | PDF Grátis',
-        'desc'  => 'Crie seu currículo de motorista em minutos. Modelo ideal para motoristas de categoria B, C, D, motoboys e entregadores.'
+        'title' => 'Currículo para Motorista e Entregador Grátis | Baixe em PDF',
+        'desc'  => 'Modelo ideal para motoristas (CNH A, B, C, D ou E) e entregadores. Crie um currículo profissional pronto para imprimir ou enviar via WhatsApp.'
     ],
     'modelos/curriculo-operador-de-caixa' => [
-    'view'  => 'modelos/operador-caixa.php',
-    'title' => 'Modelo de Currículo para Operador de Caixa 2026 | PDF Grátis',
-    'desc'  => 'Confira o melhor modelo de currículo para operador de caixa. Exemplos de habilidades, objetivos e dicas para se destacar no varejo.'
+        'view'  => 'modelos/operador-caixa.php',
+        'title' => 'Currículo para Operador de Caixa Grátis | Baixe em PDF',
+        'desc'  => 'Baixe o modelo de currículo para operador de caixa mais utilizado no varejo. Exemplos de objetivos e habilidades para supermercados e lojas.'
     ],
     'modelos/curriculo-servicos-gerais' => [
-    'view'  => 'modelos/servicos-gerais.php',
-    'title' => 'Modelo de Currículo para Serviços Gerais e Limpeza | Baixe em PDF',
-    'desc'  => 'Crie seu currículo para auxiliar de serviços gerais e limpeza. Modelo pronto com habilidades, objetivos e dicas de conservação predial.'
+        'view'  => 'modelos/servicos-gerais.php',
+        'title' => 'Currículo para Serviços Gerais e Limpeza | Baixe em PDF',
+        'desc'  => 'Modelo de currículo simples e direto para auxiliar de serviços gerais e limpeza. Pronto para preencher, baixar em PDF e entregar nas empresas.'
     ],
     'modelos/curriculo-estagio' => [
-    'view'  => 'modelos/estagio.php',
-    'title' => 'Modelo de Currículo para Estágio 2026 | Baixe em PDF',
-    'desc'  => 'Aprenda como fazer um currículo de estágio imbatível. Baixe o modelo ideal para estudantes, com dicas de objetivos e projetos acadêmicos.'
+        'view'  => 'modelos/estagio.php',
+        'title' => 'Currículo para Estágio 2026 | Modelo Grátis em PDF',
+        'desc'  => 'Comece sua carreira com o pé direito. Modelo de currículo para estágio focado em formação acadêmica, cursos e potencial profissional. Baixe em PDF.'
     ],
     'modelos/curriculo-vigilante-e-porteiro' => [
-    'view'  => 'modelos/vigilante.php',
-    'title' => 'Modelo de Currículo para Vigilante e Porteiro 2026 | Baixe em PDF',
-    'desc'  => 'Confira o melhor modelo de currículo para vigilante e porteiro. Exemplos prontos com cursos de formação, habilidades e dicas de segurança patrimonial.'
+        'view'  => 'modelos/vigilante.php',
+        'title' => 'Currículo para Vigilante e Porteiro Grátis | Baixe em PDF',
+        'desc'  => 'Destaque seus cursos de formação e experiência em segurança. Modelo de currículo pronto para vigilantes e porteiros. Baixe agora gratuitamente.'
     ],
 ];
