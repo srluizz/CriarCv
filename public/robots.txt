@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /src/
+Disallow: /vendor/
+Disallow: /config/
+
+Sitemap: https://criarcv.online/sitemap.xml
