@@ -1,144 +1,181 @@
 <main class="container mx-auto px-4 py-12">
+<nav class="max-w-4xl mx-auto mb-12 text-sm" aria-label="Breadcrumb">
+        <ol class="list-none p-0 inline-flex items-center text-gray-500">
+            <li class="flex items-center">
+                <a href="<?= BASE_URL ?>" class="hover:text-blue-600 transition-colors font-medium">Home</a>
+                <svg class="w-4 h-4 mx-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </li>
+            <li class="flex items-center">
+                <a href="<?= BASE_URL ?>/modelos" class="hover:text-blue-600 transition-colors font-medium">Modelos</a>
+                <svg class="w-4 h-4 mx-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </li>
+            <li class="text-blue-600 font-bold tracking-tight">Auxiliar Administrativo</li>
+        </ol>
+    </nav>
+
     <section class="max-w-4xl mx-auto">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Modelo de Currículo para Auxiliar Administrativo</h1>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Destaque suas habilidades em rotinas administrativas e domine os processos de seleção. Crie seu currículo profissional em minutos.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="<?= BASE_URL ?>/gerador" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:-translate-y-1 text-center">
-                    Criar meu Currículo Agora
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
+                Modelo de Currículo para Auxiliar Administrativo: Guia 2026
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Baixe seu <strong>currículo de auxiliar administrativo em PDF</strong>. Aprenda a destacar competências em rotinas de escritório, secretariado e gestão de processos para conquistar sua vaga.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+                <a href="<?= BASE_URL ?>/gerador" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-xl shadow-2xl transition duration-300 transform hover:scale-105 text-center">
+                    Criar Currículo PDF Agora
                 </a>
-                <a href="#exemplo" class="bg-white border border-gray-300 text-gray-700 font-bold py-4 px-10 rounded-lg hover:bg-gray-50 transition duration-300 text-center">
-                    Ver Exemplo Pronto
+                <a href="#exemplo" class="w-full sm:w-auto bg-white border border-gray-300 text-gray-700 font-bold py-4 px-10 rounded-lg hover:bg-gray-50 transition duration-300 text-center shadow-sm">
+                    Ver Exemplo Completo
                 </a>
             </div>
         </header>
 
         <article class="prose lg:prose-xl mx-auto text-gray-800">
             
-            <h2 class="text-3xl font-bold mb-6 border-b pb-2 text-gray-900">O que um Auxiliar Administrativo deve colocar no currículo?</h2>
-            <p class="mb-6">
-                A função de <strong>Auxiliar Administrativo</strong> exige organização, atenção aos detalhes e domínio de ferramentas digitais. Para o Google e os recrutadores, seu currículo precisa conter palavras-chave estratégicas como "rotinas administrativas", "fluxo de caixa" e "atendimento ao cliente".
+            <h2 class="text-3xl font-bold mb-6 border-b-4 border-blue-600 inline-block pb-1 text-gray-900">Como criar um perfil vencedor para Auxiliar Administrativo?</h2>
+            <p class="mb-6 leading-relaxed">
+                O cargo de <strong>auxiliar administrativo</strong> é a porta de entrada para diversas áreas corporativas. No mercado de 2026, as empresas buscam profissionais que dominem não apenas as rotinas básicas, mas que saibam utilizar ferramentas de automação e sistemas ERP para otimizar o tempo de resposta do setor.
             </p>
 
-            <div class="grid md:grid-cols-2 gap-6 my-10 not-prose">
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 mb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
-                        Rotinas de Escritório
-                    </h3>
-                    <p class="text-sm text-gray-700 italic">Mencione experiência com arquivamento, organização de documentos, recepção e atendimento telefônico/e-mail.</p>
+            <div class="grid md:grid-cols-2 gap-6 my-12 not-prose">
+                <div class="bg-white p-6 rounded-xl border-l-4 border-blue-600 shadow-md">
+                    <h3 class="font-bold text-gray-900 mb-2">💻 Domínio de Ferramentas</h3>
+                    <p class="text-sm text-gray-600">Essencial destacar Excel (Procv/Tabelas Dinâmicas), Google Workspace e sistemas de gestão financeira.</p>
                 </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 mb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path></svg>
-                        Informática e Excel
-                    </h3>
-                    <p class="text-sm text-gray-700 italic">O domínio do <strong>Pacote Office</strong> (Excel e Word) é o requisito número 1. Destaque fórmulas, tabelas dinâmicas e PROCV.</p>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-green-600 shadow-md">
+                    <h3 class="font-bold text-gray-900 mb-2">📂 Organização e Processos</h3>
+                    <p class="text-sm text-gray-600">Experiência com gestão de arquivos, triagem de correspondência e controle de suprimentos (almoxarifado).</p>
                 </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 mb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
-                        Suporte Financeiro
-                    </h3>
-                    <p class="text-sm text-gray-700 italic">Habilidades com lançamento de notas fiscais, controle de fluxo de caixa e conciliação bancária são grandes diferenciais.</p>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-yellow-600 shadow-md">
+                    <h3 class="font-bold text-gray-900 mb-2">📞 Comunicação Profissional</h3>
+                    <p class="text-sm text-gray-600">Redação de ofícios, atendimento telefônico bilíngue e suporte direto ao cliente interno/externo.</p>
                 </div>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-slate-800 mb-2 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                        Softwares ERP
-                    </h3>
-                    <p class="text-sm text-gray-700 italic">Conhecimento em sistemas como SAP, Totvs, Omie ou Conta Azul demonstra prontidão tecnológica imediata.</p>
+                <div class="bg-white p-6 rounded-xl border-l-4 border-purple-600 shadow-md">
+                    <h3 class="font-bold text-gray-900 mb-2">📑 Rotinas Financeiras</h3>
+                    <p class="text-sm text-gray-600">Lançamento de notas fiscais (NF-e), contas a pagar/receber e suporte em conciliação bancária.</p>
                 </div>
             </div>
 
-            <h2 class="text-2xl font-bold mb-4">Habilidades mais valorizadas (Hard Skills)</h2>
-            <ul class="list-disc pl-5 space-y-2 mb-8 text-base">
-                <li>Gestão de arquivos físicos e digitalização de documentos em nuvem.</li>
-                <li>Lançamento de contas a pagar/receber e suporte ao faturamento.</li>
-                <li>Elaboração de relatórios gerenciais e apresentações corporativas.</li>
-                <li>Controle de estoque de insumos e suprimentos de escritório.</li>
-                <li>Redação oficial: elaboração de e-mails, ofícios e memorandos profissionais.</li>
+            <h2 class="text-2xl font-bold mb-6 text-gray-900 uppercase tracking-wide">Competências e Soft Skills (Habilidades Comportamentais)</h2>
+            <p class="mb-6">Além do conhecimento técnico, recrutadores de RH focam no seu comportamento. No seu currículo, tente demonstrar:</p>
+            <ul class="list-none pl-0 space-y-4 mb-10">
+                <li class="flex items-start bg-gray-50 p-4 rounded-lg">
+                    <span class="text-blue-600 mr-3 text-xl font-bold">1.</span> 
+                    <span><strong>Proatividade:</strong> Antecipar necessidades do escritório antes mesmo de ser solicitado.</span>
+                </li>
+                <li class="flex items-start bg-gray-50 p-4 rounded-lg">
+                    <span class="text-blue-600 mr-3 text-xl font-bold">2.</span> 
+                    <span><strong>Organização Extrema:</strong> Capacidade de lidar com múltiplos prazos e prioridades sem perder a qualidade.</span>
+                </li>
+                <li class="flex items-start bg-gray-50 p-4 rounded-lg">
+                    <span class="text-blue-600 mr-3 text-xl font-bold">3.</span> 
+                    <span><strong>Discrição e Ética:</strong> O auxiliar ADM lida com dados sensíveis e informações confidenciais da empresa.</span>
+                </li>
             </ul>
 
-            <h2 id="exemplo" class="text-2xl font-bold mb-6">Exemplo de Currículo para Auxiliar Administrativo</h2>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900 uppercase tracking-wide">Como passar nos filtros de RH (ATS)?</h2>
+            <p class="mb-6 leading-relaxed italic">
+                Muitas empresas usam softwares para filtrar currículos. Para não ser descartado, utilize "palavras de ação" no seu texto, como: <strong>Organizei, Desenvolvi, Reduzi custos, Controlei, Apoiei e Implementei.</strong>
+            </p>
+
+            <h2 id="exemplo" class="text-3xl font-bold mt-16 mb-8 text-center text-gray-900 underline decoration-blue-600 decoration-4 underline-offset-8">Exemplo de Currículo Auxiliar Administrativo (Padrão 2026)</h2>
             
-            <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-12 shadow-sm font-sans text-sm text-gray-700 relative overflow-hidden not-prose">
-                <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg font-bold uppercase text-[10px] tracking-widest">Modelo Real</div>
-                
-                <div class="border-b-2 border-gray-100 pb-4 mb-6">
-                    <h3 class="text-2xl font-black text-gray-900 uppercase">Mariana Oliveira</h3>
-                    <p class="text-gray-500">Osasco, SP | (11) 99999-8888 | mariana.adm@email.com</p>
-                </div>
+            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-3xl p-4 md:p-10 mb-16 not-prose shadow-inner">
+                <div class="bg-white p-8 shadow-2xl rounded-sm font-sans max-w-2xl mx-auto border-t-[12px] border-blue-600 text-[13px]">
+                    <div class="text-center mb-8">
+                        <h3 class="text-3xl font-black text-gray-900 mb-1 uppercase tracking-tighter">MARIANA OLIVEIRA</h3>
+                        <p class="text-gray-500 font-medium">Osasco, SP • (11) 99999-8888 • linkedin.com/in/mariana-adm</p>
+                    </div>
 
-                <div class="mb-6">
-                    <h4 class="font-bold border-b-2 border-blue-100 text-blue-700 mb-2 uppercase text-xs tracking-wider">Objetivo Profissional</h4>
-                    <p class="text-gray-700">Atuar como Auxiliar Administrativo, utilizando minhas competências em organização de processos, domínio avançado de Excel e suporte operacional para otimizar as rotinas da empresa.</p>
-                </div>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-blue-700 border-b-2 border-blue-50 mb-2 uppercase text-xs tracking-widest">Resumo Profissional</h4>
+                        <p class="leading-relaxed">Profissional com 3 anos de experiência sólida em <strong>suporte administrativo</strong> e financeiro. Especialista em <strong>organização de fluxo de caixa</strong> e atendimento a fornecedores. Domínio avançado de ferramentas Microsoft 365 e sistemas de gestão integrada.</p>
+                    </div>
 
-                <div class="mb-6">
-                    <h4 class="font-bold border-b-2 border-blue-100 text-blue-700 mb-3 uppercase text-xs tracking-wider">Experiência Profissional</h4>
-                    <div class="mb-4">
-                        <div class="flex justify-between items-baseline">
-                            <p class="font-bold text-gray-900 text-base">Assistente de Escritório | Empresa Exemplo LTDA</p>
-                            <span class="text-[10px] font-bold text-gray-400">JAN/2023 – ATUAL</span>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-blue-700 border-b-2 border-blue-50 mb-3 uppercase text-xs tracking-widest">Experiência Profissional</h4>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-baseline">
+                                <p class="font-bold text-gray-900 text-sm">Assistente de Escritório | Empresa Exemplo</p>
+                                <span class="text-[10px] font-bold text-gray-400">2023 - ATUAL</span>
+                            </div>
+                            <ul class="list-disc pl-5 mt-2 space-y-1.5 text-gray-700">
+                                <li>Gestão de <strong>contas a pagar e receber</strong> via ERP SAP.</li>
+                                <li>Redução de 15% na inadimplência através de fluxos de cobrança ativa.</li>
+                                <li>Suporte na organização de agendas e logística de viagens da diretoria.</li>
+                            </ul>
                         </div>
-                        <ul class="list-disc pl-5 mt-2 space-y-1 text-gray-600">
-                            <li>Responsável pelo controle de fluxo de caixa e lançamento de 50+ notas fiscais diárias.</li>
-                            <li>Organização de arquivos físicos e digitais, reduzindo o tempo de busca em 30%.</li>
-                            <li>Atendimento direto a fornecedores e gestão de compras de insumos.</li>
-                        </ul>
                     </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-bold border-b-2 border-blue-100 text-blue-700 mb-2 uppercase text-xs tracking-wider">Formação Acadêmica</h4>
-                        <p class="font-bold text-gray-900">Graduação em Administração (Cursando)</p>
-                        <p class="text-gray-600 italic text-[11px]">Universidade Presbiteriana Mackenzie | Prev. 2027</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold border-b-2 border-blue-100 text-blue-700 mb-2 uppercase text-xs tracking-wider">Qualificações Técnicas</h4>
-                        <ul class="text-[11px] text-gray-600 space-y-1">
-                            <li>• Pacote Office Avançado (Excel: Tabelas Dinâmicas)</li>
-                            <li>• Conhecimento em ERP SAP e Conta Azul</li>
-                            <li>• Inglês Intermediário (Leitura e Escrita)</li>
-                        </ul>
+                    <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-blue-700 mb-2 uppercase text-[10px]">Formação</h4>
+                            <p class="font-bold text-gray-900">Adm (Cursando)</p>
+                            <p class="text-gray-500">Universidade Mackenzie</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-700 mb-2 uppercase text-[10px]">Habilidades</h4>
+                            <p class="text-gray-700 font-medium">• Excel Avançado</p>
+                            <p class="text-gray-700 font-medium">• Inglês Técnico</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl font-bold mb-6 text-gray-900">Dúvidas Comuns para Administrativos</h2>
-            <div class="space-y-4 not-prose">
-                <details class="group bg-blue-50 border border-blue-100 rounded-lg p-4 transition-all">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-800">
-                        Devo colocar "Habilidade em Internet" no currículo?
-                        <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
-                    </summary>
-                    <p class="mt-4 text-gray-700 text-sm italic">Hoje em dia, isso é básico. Prefira termos específicos como: "Pesquisa avançada em portais governamentais", "Uso de ferramentas de IA para produtividade" ou "Navegação em sistemas de gestão (ERP)".</p>
-                </details>
 
-                <details class="group bg-blue-50 border border-blue-100 rounded-lg p-4 transition-all">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-800">
-                        Qual a melhor fonte para um currículo administrativo?
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Perguntas Frequentes (FAQ)</h2>
+            <div class="space-y-4 not-prose mb-12">
+                <?php 
+                $faqs = [
+                    "Qual o salário de um Auxiliar Administrativo em 2026?" => "A média salarial atual no Brasil varia entre R$ 1.900 e R$ 3.200, dependendo da senioridade e do porte da empresa.",
+                    "Quais cursos valorizam o currículo de Auxiliar ADM?" => "Cursos de Excel Avançado, Assistente Administrativo (SENAI/SENAC), Gestão de Projetos Básica e certificações em Softwares ERP (como SAP ou Conta Azul).",
+                    "Como destacar o objetivo para quem não tem experiência?" => "Foque na formação acadêmica e na vontade de aprender. Exemplo: 'Busco primeira oportunidade para aplicar conhecimentos técnicos em rotinas administrativas e Pacote Office'."
+                ];
+                foreach($faqs as $pergunta => $resposta): ?>
+                <details class="group bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:border-blue-200 transition-all">
+                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-900">
+                        <?= $pergunta ?>
                         <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
                     </summary>
-                    <p class="mt-4 text-gray-700 text-sm italic">Use fontes limpas e profissionais como Arial, Calibri ou Roboto. Nosso gerador já aplica automaticamente essas normas de design profissional para garantir legibilidade pelos sistemas de RH.</p>
+                    <p class="mt-4 text-gray-700 leading-relaxed italic border-l-2 border-blue-600 pl-4"><?= $resposta ?></p>
                 </details>
-
-                <details class="group bg-blue-50 border border-blue-100 rounded-lg p-4 transition-all">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-800">
-                        Precisa colocar experiências de áreas diferentes?
-                        <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
-                    </summary>
-                    <p class="mt-4 text-gray-700 text-sm italic">Sim, se elas mostrarem habilidades transferíveis, como atendimento ao público, responsabilidade com dinheiro ou organização de tarefas. Se tiver muitas experiências, priorize as administrativas.</p>
-                </details>
+                <?php endforeach; ?>
             </div>
 
-            <div class="mt-16 bg-slate-900 p-10 rounded-3xl text-center text-white shadow-2xl not-prose">
-                <h2 class="text-3xl font-bold mb-4 text-white">Crie um Currículo de Alto Nível</h2>
-                <p class="text-slate-400 mb-8 max-w-lg mx-auto">Não deixe uma vaga escapar por causa de um layout antigo. Use nossa tecnologia para gerar o PDF perfeito no padrão 2026.</p>
-                <a href="<?= BASE_URL ?>/gerador" class="inline-block bg-blue-600 text-white font-extrabold py-4 px-12 rounded-full hover:bg-blue-700 transition-all text-lg shadow-lg">
-                    Montar Currículo de Auxiliar Adm
-                </a>
+            <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100 my-12 not-prose">
+                <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Checklist: Seu currículo está pronto?
+                </h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center text-gray-700">
+                        <input type="checkbox" checked disabled class="mr-3 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                        Dados de contato atualizados (LinkedIn incluso).
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <input type="checkbox" checked disabled class="mr-3 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                        Palavras-chave do cargo espalhadas pelo texto.
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <input type="checkbox" checked disabled class="mr-3 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                        Arquivo salvo no formato PDF (nunca em .doc).
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-20 bg-gradient-to-br from-gray-900 to-blue-900 p-12 rounded-3xl text-center text-white shadow-2xl not-prose overflow-hidden relative">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Pronto para ser contratado?</h2>
+                    <p class="text-blue-200 mb-10 max-w-lg mx-auto text-lg">Junte-se a milhares de profissionais que já baixaram o modelo ideal e passaram nas entrevistas.</p>
+                    <a href="<?= BASE_URL ?>/gerador" class="inline-block bg-white text-blue-900 font-black py-5 px-14 rounded-full hover:bg-blue-50 transition-all text-xl uppercase tracking-tighter shadow-lg hover:scale-105 transform">
+                        Montar Meu Currículo Grátis
+                    </a>
+                </div>
+                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500 rounded-full opacity-10"></div>
             </div>
 
             <?php 
@@ -153,39 +190,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "O que colocar no objetivo do currículo de auxiliar administrativo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "O objetivo deve ser direto e focado em suporte operacional, mencionando competências como domínio de Excel, organização de documentos e auxílio em rotinas financeiras."
-      }
+      "@type": "Article",
+      "headline": "Modelo de Currículo para Auxiliar Administrativo: Guia Completo 2026",
+      "description": "Aprenda a fazer um currículo para auxiliar administrativo de sucesso. Baixe modelos prontos, veja exemplos de objetivos e habilidades mais buscadas no mercado.",
+      "author": {
+        "@type": "Organization",
+        "name": "CriarCV.online"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CriarCV.online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "<?= BASE_URL ?>/assets/img/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "<?= BASE_URL ?>/modelos/curriculo-auxiliar-administrativo"
+      },
+      "image": "<?= BASE_URL ?>/assets/img/og-image-adm.jpg"
     },
     {
-      "@type": "Question",
-      "name": "Quais as habilidades mais importantes para auxiliar administrativo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "As habilidades essenciais são: Pacote Office (especialmente Excel), rotinas de arquivamento, atendimento telefônico, redação de e-mails profissionais e familiaridade com sistemas ERP."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Como baixar um modelo de currículo administrativo em PDF?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No <?= str_replace(['https://', 'http://'], '', BASE_URL) ?> você preenche seus dados em um formulário simples e gera um PDF otimizado para sistemas de recrutamento (ATS)."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Qual curso é bom para auxiliar administrativo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cursos de Informática Profissional, Excel Avançado, Assistente Administrativo (SENAI/SENAC) e Gestão Financeira são muito bem vistos no mercado."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qual o salário de um Auxiliar Administrativo em 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A média salarial atual no Brasil varia entre R$ 1.900 e R$ 3.200, dependendo da senioridade e do porte da empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais cursos valorizam o currículo de Auxiliar ADM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cursos de Excel Avançado, Assistente Administrativo (SENAI/SENAC), Gestão de Projetos Básica e certificações em Softwares ERP (como SAP ou Conta Azul)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como destacar o objetivo para quem não tem experiência?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Foque na formação acadêmica e na vontade de aprender. Exemplo: 'Busco primeira oportunidade para aplicar conhecimentos técnicos em rotinas administrativas e Pacote Office'."
+          }
+        }
+      ]
     }
   ]
 }
