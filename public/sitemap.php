@@ -2,48 +2,48 @@
 
 header("Content-Type: application/xml; charset=utf-8");
 
-$base_url = "https://criarcv.online"; 
+$base_url = "https://criarcv.online"; // Sem barra no final
 
+// Carrega as rotas
 $pages = require_once __DIR__ . '/../src/config/routes.php';
 
+// Configurações específicas para slugs personalizados, se necessário
 $config_especifica = [
-    "home"        => ["slug" => "", "priority" => "1.0", "changefreq" => "daily"],
-    "gerador"     => ["slug" => "gerador", "priority" => "0.9", "changefreq" => "monthly"],
-    "modelos"     => ["slug" => "modelos", "priority" => "0.8", "changefreq" => "weekly"],
-    "privacidade" => ["slug" => "privacidade", "priority" => "0.3", "changefreq" => "monthly"],
-    "termos"      => ["slug" => "termos", "priority" => "0.3", "changefreq" => "monthly"],
+    "home"        => ["slug" => ""], // Home vazia para ficar apenas a base_url
+    "gerador"     => ["slug" => "gerador"],
+    "modelos"     => ["slug" => "modelos"],
+    "privacidade" => ["slug" => "privacidade"],
+    "termos"      => ["slug" => "termos"],
 ];
 
 echo '<?xml version="1.0" encoding="UTF-8"?>';
-echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+echo "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
 foreach ($pages as $slug => $info) {
     
-    $url_final = ($slug === 'home') ? $base_url . "/" : $base_url . "/" . $slug;
-    
-    $priority = "0.5";
-    $changefreq = "monthly";
-
-    if (str_starts_with($slug, 'modelos/curriculo-')) {
-        $priority = "0.7";
-        $changefreq = "weekly";
+    // Define a URL final garantindo que NÃO tenha barra no final
+    if ($slug === 'home' || $slug === '') {
+        $url_final = $base_url;
+    } else {
+        // Se houver uma slug específica configurada, usa ela, senão usa a chave do array $pages
+        $slug_real = isset($config_especifica[$slug]['slug']) ? $config_especifica[$slug]['slug'] : $slug;
+        $url_final = $base_url . "/" . ltrim($slug_real, '/');
     }
 
-    if (isset($config_especifica[$slug])) {
-        $conf = $config_especifica[$slug];
-        $url_final = $base_url . "/" . $conf['slug'];
-        $priority = $conf['priority'];
-        $changefreq = $conf['changefreq'];
-    }
+    // Busca a data de modificação do arquivo da View para o <lastmod>
     $arquivo_view = __DIR__ . '/../src/app/Views/pages/' . $info['view'];
-    $lastmod = file_exists($arquivo_view) ? date("Y-m-d", filemtime($arquivo_view)) : date('Y-m-d');
+    
+    if (file_exists($arquivo_view)) {
+        $lastmod = date("Y-m-d", filemtime($arquivo_view));
+    } else {
+        // Fallback caso o arquivo não seja encontrado
+        $lastmod = date('Y-m-d');
+    }
 
-    echo '<url>';
-    echo '<loc>' . htmlspecialchars($url_final) . '</loc>';
-    echo '<lastmod>' . $lastmod . '</lastmod>';
-    echo '<changefreq>' . $changefreq . '</changefreq>';
-    echo '<priority>' . $priority . '</priority>';
-    echo '</url>';
+    echo "\n  " . '<url>';
+    echo "\n    " . '<loc>' . htmlspecialchars($url_final) . '</loc>';
+    echo "\n    " . '<lastmod>' . $lastmod . '</lastmod>';
+    echo "\n  " . '</url>';
 }
 
-echo '</urlset>';
+echo "\n" . '</urlset>';
