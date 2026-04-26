@@ -1,3 +1,29 @@
+<?php
+// Configurações do arquivo para checagem de cache
+$css_path = $_SERVER['DOCUMENT_ROOT'] . '/public/assets/css/style.css';
+
+if (file_exists($css_path)) {
+    $last_modified_time = filemtime($css_path);
+    $etag = md5_file($css_path);
+
+    // Define os headers de cache
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s", $last_modified_time) . " GMT");
+    header("Etag: $etag");
+    header("Cache-Control: public, max-age=3600");
+
+    // Verifica se o navegador já tem a versão mais recente
+    if (
+        (isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) && strtotime($_SERVER['HTTP_IF_MODIFIED_SINCE']) == $last_modified_time) ||
+        (isset($_SERVER['HTTP_IF_NONE_MATCH']) && trim($_SERVER['HTTP_IF_NONE_MATCH']) == $etag)
+    ) {
+        header("HTTP/1.1 304 Not Modified");
+        exit;
+    }
+} else {
+    // Fallback caso o caminho dinâmico falhe, apenas mantém o cache padrão
+    header("Cache-Control: public, max-age=3600");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
@@ -8,8 +34,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/style.css?v=<?php echo file_exists($css_path) ? filemtime($css_path) : '1.0.1'; ?>">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" media="print" onload="this.media='all'">
 
     <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
     <title><?php echo $pageTitle ?? 'CriarCV.online | Currículo Profissional em Minutos'; ?></title>
@@ -18,35 +45,34 @@
     <link rel="canonical" href="<?= BASE_URL ?><?php echo $_SERVER['REQUEST_URI']; ?>">
     <meta name="facebook-domain-verification" content="oqswnugiwkqjcqy33uc6ir0w7bzfs4" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7CF9Z9PPDS"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-7CF9Z9PPDS";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
 
-    gtag('config', 'G-7CF9Z9PPDS');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7CF9Z9PPDS');
+
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1294733918949826');
+            fbq('track', 'PageView');
+        }, 3500); 
+    });
     </script>
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1294733918949826');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1294733918949826&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1294733918949826&ev=PageView&noscript=1"/></noscript>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= BASE_URL ?>/">
