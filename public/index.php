@@ -2,7 +2,7 @@
 
 session_start();
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
-    define('BASE_URL', 'http://localhost/public');
+    define('BASE_URL', 'http://localhost/criarcv/public');
 } else {
     define('BASE_URL', 'https://criarcv.online');
 }
