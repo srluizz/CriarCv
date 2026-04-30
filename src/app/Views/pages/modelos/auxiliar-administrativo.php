@@ -167,21 +167,32 @@
                 </ul>
             </div>
 
-            <div class="mt-20 bg-gradient-to-br from-gray-900 to-blue-900 p-12 rounded-3xl text-center text-white shadow-2xl not-prose overflow-hidden relative">
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Pronto para ser contratado?</h2>
-                    <p class="text-blue-200 mb-10 max-w-lg mx-auto text-lg">Junte-se a milhares de profissionais que já baixaram o modelo ideal e passaram nas entrevistas.</p>
-                    <a href="<?= BASE_URL ?>/gerador" class="inline-block bg-white text-blue-900 font-black py-5 px-14 rounded-full hover:bg-blue-50 transition-all text-xl uppercase tracking-tighter shadow-lg hover:scale-105 transform">
-                        Montar Meu Currículo Grátis
-                    </a>
-                </div>
-                <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-blue-500 rounded-full opacity-10"></div>
-            </div>
+<!--  CTA curriculo -->
+<?php 
+    $ctaTitle = "Sua jornada começa aqui";
+    $ctaDescription = "Não deixe seu futuro para depois. Gere um currículo de estágio que abre as portas do mercado.";
 
-            <?php 
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/src/app/Views/partials/outros-modelos.php';
-                if (file_exists($path)) { include $path; }
-            ?>
+
+    $basePath = ($_SERVER['HTTP_HOST'] == 'localhost') 
+                ? $_SERVER['DOCUMENT_ROOT'] . '/CriarCV' 
+                : $_SERVER['DOCUMENT_ROOT'];
+
+    $ctaPath = $basePath . '/src/app/Views/partials/cta-curriculo.php';
+
+    if (file_exists($ctaPath)) { 
+        include $ctaPath; 
+    } 
+?>
+
+<!--  Outros Modelos -->
+<?php 
+
+    $outrosModelosPath = $basePath . '/src/app/Views/partials/outros-modelos.php';
+    
+    if (file_exists($outrosModelosPath)) { 
+        include $outrosModelosPath; 
+    } 
+?>
 
         </article>
     </section>
@@ -192,9 +203,33 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "<?= BASE_URL ?>"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Modelos",
+          "item": "<?= BASE_URL ?>/modelos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Auxiliar Administrativo"
+        }
+      ]
+    },
+    {
       "@type": "Article",
       "headline": "Modelo de Currículo para Auxiliar Administrativo: Guia Completo 2026",
       "description": "Aprenda a fazer um currículo para auxiliar administrativo de sucesso. Baixe modelos prontos, veja exemplos de objetivos e habilidades mais buscadas no mercado.",
+      "datePublished": "2024-01-10T08:00:00+08:00",
+      "dateModified": "<?= date('c') ?>",
       "author": {
         "@type": "Organization",
         "name": "CriarCV.online"
