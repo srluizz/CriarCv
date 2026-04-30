@@ -1,11 +1,17 @@
 <?php
 
 session_start();
+
+// Define a URL base
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
     define('BASE_URL', 'http://localhost/criarcv/public');
 } else {
     define('BASE_URL', 'https://criarcv.online');
 }
+
+// CRIA O CAMINHO PARA OS PARTIALS
+// __DIR__ pega o caminho da pasta 'public'. O '/../' sobe e entra em 'src'
+define('PARTIALS_PATH', __DIR__ . '/../src/app/Views/partials');
 
 $pages = require_once '../src/config/routes.php';
 
