@@ -167,31 +167,21 @@
                 </ul>
             </div>
 
-<!--  CTA curriculo -->
 <?php 
+    // CTA
     $ctaTitle = "Sua jornada começa aqui";
     $ctaDescription = "Não deixe seu futuro para depois. Gere um currículo de estágio que abre as portas do mercado.";
-
-
-    $basePath = ($_SERVER['HTTP_HOST'] == 'localhost') 
-                ? $_SERVER['DOCUMENT_ROOT'] . '/CriarCV' 
-                : $_SERVER['DOCUMENT_ROOT'];
-
-    $ctaPath = $basePath . '/src/app/Views/partials/cta-curriculo.php';
-
-    if (file_exists($ctaPath)) { 
-        include $ctaPath; 
-    } 
-?>
-
-<!--  Outros Modelos -->
-<?php 
-
-    $outrosModelosPath = $basePath . '/src/app/Views/partials/outros-modelos.php';
     
-    if (file_exists($outrosModelosPath)) { 
-        include $outrosModelosPath; 
-    } 
+    $ctaFile = PARTIALS_PATH . '/cta-curriculo.php';
+    if (file_exists($ctaFile)) {
+        include $ctaFile;
+    }
+
+    // OUTROS MODELOS
+    $outrosFile = PARTIALS_PATH . '/outros-modelos.php';
+    if (file_exists($outrosFile)) {
+        include $outrosFile;
+    }
 ?>
 
         </article>
