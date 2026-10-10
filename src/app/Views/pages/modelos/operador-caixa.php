@@ -1,178 +1,88 @@
-<main class="container mx-auto px-4 py-12">
-    <section class="max-w-4xl mx-auto">
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Modelo de Currículo para Operador de Caixa</h1>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Agilidade, confiança e atenção. Gere um currículo profissional otimizado para supermercados, lojas e comércios em geral.</p>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="<?= BASE_URL ?>/gerador" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:-translate-y-1 text-center border-b-4 border-blue-800">
-                    Criar Currículo de Operador Agora
-                </a>
-            </div>
-        </header>
-
-        <article class="prose lg:prose-xl mx-auto text-gray-800">
-            
-            <h2 class="text-3xl font-bold mb-6 border-b pb-2 text-gray-900">O que colocar no currículo de Operador de Caixa?</h2>
-            <p class="mb-6">
-                A função de <strong>Operador de Caixa</strong> exige responsabilidade financeira e agilidade no atendimento. No seu currículo, termos como <strong>"fechamento de caixa"</strong>, <strong>"sangria"</strong>, <strong>"atendimento ao cliente"</strong> e <strong>"frente de loja"</strong> são fundamentais para o ranqueamento.
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-4 my-10 not-prose">
-                <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 flex items-start space-x-4">
-                    <span class="text-3xl">💰</span>
-                    <div>
-                        <h3 class="text-base font-bold text-blue-800">Operações Financeiras</h3>
-                        <p class="text-xs text-gray-600 mt-1">Domínio em abertura e fechamento de caixa, sangrias, estornos e diferentes formas de pagamento.</p>
-                    </div>
-                </div>
-                <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 flex items-start space-x-4">
-                    <span class="text-3xl">💳</span>
-                    <div>
-                        <h3 class="text-base font-bold text-slate-800">Tecnologia e PDV</h3>
-                        <p class="text-xs text-gray-600 mt-1">Experiência com sistemas de Ponto de Venda (PDV), leitores de código de barras e máquinas de cartão.</p>
-                    </div>
-                </div>
-                <div class="bg-indigo-50 p-5 rounded-lg border border-indigo-100 flex items-start space-x-4">
-                    <span class="text-3xl">🛒</span>
-                    <div>
-                        <h3 class="text-base font-bold text-indigo-800">Frente de Loja</h3>
-                        <p class="text-xs text-gray-600 mt-1">Habilidade em organização de check-out, reposição de produtos de última hora e limpeza da estação.</p>
-                    </div>
-                </div>
-                <div class="bg-amber-50 p-5 rounded-lg border border-amber-100 flex items-start space-x-4">
-                    <span class="text-3xl">⚡</span>
-                    <div>
-                        <h3 class="text-base font-bold text-amber-800">Agilidade e Foco</h3>
-                        <p class="text-xs text-gray-600 mt-1">Capacidade de lidar com fluxos intensos de clientes mantendo a cordialidade e a precisão no troco.</p>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="text-2xl font-bold mb-4">Exemplos de Objetivos Profissionais</h2>
-            <div class="space-y-4 bg-gray-50 p-6 rounded-xl border-l-4 border-blue-600 mb-8 not-prose">
-                <p class="text-sm italic text-gray-700 leading-relaxed">"Busco oportunidade como Operador de Caixa, visando aplicar minha experiência em atendimento ao público e agilidade financeira para contribuir com o fluxo eficiente da loja."</p>
-                <hr class="border-gray-200">
-                <p class="text-sm italic text-gray-700 leading-relaxed">"Desejo atuar na frente de caixa, focado na precisão do fechamento e na satisfação dos clientes através de um atendimento rápido e cordial."</p>
-            </div>
-
-            <h2 id="exemplo" class="text-2xl font-bold mb-6">Exemplo de Currículo Preenchido</h2>
-            
-            <div class="bg-white border-2 border-gray-100 rounded-xl p-6 md:p-10 mb-12 shadow-sm font-sans text-gray-700 not-prose">
-                <div class="border-b-2 border-gray-900 pb-4 mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 uppercase tracking-tight">Marcos Oliveira</h3>
-                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-500 mt-1">
-                        <span>Osasco, SP</span>
-                        <span>•</span>
-                        <span>(11) 95555-4444</span>
-                        <span>•</span>
-                        <span>marcos.caixa@email.com</span>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <section>
-                        <h4 class="text-xs font-black text-blue-700 uppercase tracking-wider mb-2">Objetivo</h4>
-                        <p class="text-sm leading-relaxed text-gray-800 font-medium italic">"Operador de caixa com foco em agilidade e exatidão financeira, buscando oferecer um atendimento de excelência e suporte às rotinas de check-out."</p>
-                    </section>
-
-                    <section>
-                        <h4 class="text-xs font-black text-blue-700 uppercase tracking-wider mb-2">Experiência Profissional</h4>
-                        <div class="text-sm mb-4">
-                            <p class="font-bold text-gray-900">Operador de Caixa | Supermercado Exemplo</p>
-                            <p class="text-gray-500 italic">2022 – Atual</p>
-                            <ul class="list-disc pl-5 mt-2 space-y-1 text-xs">
-                                <li>Registro de mercadorias com alta produtividade e baixo índice de erros.</li>
-                                <li>Fechamento de caixa diário sem divergências de valores.</li>
-                                <li>Venda de serviços agregados (recargas de celular e cartões fidelidade).</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <section>
-                            <h4 class="text-xs font-black text-blue-700 uppercase tracking-wider mb-2">Habilidades Técnicas</h4>
-                            <ul class="text-xs space-y-2 text-gray-800">
-                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Manuseio de Valores e Troco</li>
-                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Operação de Máquinas de Cartão</li>
-                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span> Matemática Básica e Raciocínio Rápido</li>
-                            </ul>
-                        </section>
-                        <section>
-                            <h4 class="text-xs font-black text-blue-700 uppercase tracking-wider mb-2">Qualificações</h4>
-                            <ul class="text-xs space-y-2 text-gray-800">
-                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span> Ensino Médio Completo</li>
-                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span> Curso de Atendimento ao Cliente</li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="text-2xl font-bold mb-6 text-gray-900">FAQ: Dúvidas sobre o Currículo de Operador de Caixa</h2>
-            <div class="space-y-4 mb-12 not-prose">
-                <details class="group bg-white border border-gray-200 rounded-xl p-4 transition-all hover:border-blue-300">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-900">
-                        O que é "sangria de caixa" no currículo?
-                        <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
-                    </summary>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">A sangria é a retirada de valores do caixa por segurança. Mencionar que você sabe realizar sangrias mostra que você entende os processos de segurança financeira da loja.</p>
-                </details>
-                
-                <details class="group bg-white border border-gray-200 rounded-xl p-4 transition-all hover:border-blue-300">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-900">
-                        Não tenho experiência, como fazer o currículo de caixa?
-                        <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
-                    </summary>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">Foque em suas habilidades matemáticas, facilidade com tecnologia e boa comunicação. Destaque sua pontualidade e disposição para aprender as rotinas do check-out.</p>
-                </details>
-
-                <details class="group bg-white border border-gray-200 rounded-xl p-4 transition-all hover:border-blue-300">
-                    <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-gray-900">
-                        Precisa saber usar computador para ser caixa?
-                        <span class="group-open:rotate-180 transition-transform text-blue-600">▼</span>
-                    </summary>
-                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">Sim, os caixas modernos são sistemas informatizados. Ter noções básicas de informática é um requisito fundamental para operar o PDV.</p>
-                </details>
-            </div>
-
-            <div class="bg-gradient-to-br from-blue-700 to-blue-900 p-8 rounded-2xl text-center text-white shadow-lg not-prose mb-12">
-                <h3 class="text-2xl font-bold mb-4">Sua vaga no varejo começa aqui</h3>
-                <p class="mb-6 opacity-90 text-blue-50">Não use modelos ultrapassados. Gere um currículo moderno que os gerentes de loja vão notar imediatamente.</p>
-                <a href="<?= BASE_URL ?>/gerador" class="inline-block bg-white text-blue-700 font-extrabold py-3 px-10 rounded-full hover:shadow-xl hover:scale-105 transition-all">
-                    Gerar meu Currículo PDF Grátis
-                </a>
-            </div>
-
-            <?php 
-                $path = $_SERVER['DOCUMENT_ROOT'] . '/src/app/Views/partials/outros-modelos.php';
-                if (file_exists($path)) { include $path; }
-            ?>
-
-        </article>
-    </section>
-</main>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "O que colocar no objetivo de currículo para caixa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Destaque sua agilidade no atendimento, facilidade com contas e fechamento de caixa."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quais as principais habilidades de um operador de caixa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Matemática básica, operação de PDV, cordialidade no atendimento e atenção aos processos de sangria."
-      }
-    }
-  ]
-}
-</script>
+<?php
+$pagina = [
+    'path' => 'modelos/curriculo-operador-de-caixa',
+    'breadcrumb' => 'Operador de caixa',
+    'h1' => 'Currículo para operador de caixa: fechamento, fila e PDV',
+    'lead' => 'Caixa se contrata por agilidade sem erro. Veja como escrever sangria, fechamento e atendimento de frente de loja, inclusive no primeiro emprego, com um exemplo de supermercado.',
+    'cta' => 'Criar currículo de operador de caixa',
+    'cta_titulo' => 'Abra o exemplo de caixa',
+    'cta_texto' => 'O gerador traz o currículo do Marcos. Troque o supermercado, o movimento e os cursos pelos seus.',
+    'erros_titulo' => 'Erros que a supervisão de loja não ignora',
+    'palavras_intro' => 'Supermercado, farmácia e loja de roupa usam palavras diferentes. Leve para o currículo as da vaga: perecível e sangria, convênio, ou troca e embalagem.',
+    'palavras' => ['Operador de caixa', 'PDV', 'Fechamento de caixa', 'Sangria', 'Troco', 'TEF', 'Atendimento', 'Fila', 'Quebra de caixa'],
+    'exemplo_titulo' => 'Exemplo de currículo de operador de caixa',
+    'checklist' => [
+        'Fechamento, troco ou sangria aparecem como tarefa, não só a palavra caixa.',
+        'Você não prometeu zero erro se já teve quebra. Se a quebra era baixa, diga como conferia.',
+        'O segmento da loja está no resumo.',
+        'Disponibilidade de fim de semana e feriado está correta.',
+    ],
+    'secoes' => [
+        [
+            'id' => 'o-que-colocar',
+            'titulo' => 'O que colocar no currículo de operador de caixa',
+            'paragrafos' => [
+                'O supervisor quer alguém que passa mercadoria, recebe, dá troco e fecha o caixa com a gaveta batendo. Sangria é a retirada de excesso de dinheiro da gaveta durante o turno, levada ao administrativo com registro. Quebra é a diferença entre o sistema e o dinheiro contado. TEF é o pagamento no cartão integrado ao PDV.',
+                'Quem nunca operou caixa pode usar atendimento de balcão, reposição ou curso de operador. Não escreva que já fechou caixa se só observou. Diga que busca a primeira função e que já lidou com dinheiro em outra situação, se isso for verdade.',
+            ],
+            'cards' => [
+                ['titulo' => 'Movimento do turno', 'texto' => 'Tipo de loja e ritmo: supermercado de bairro, hipermercado, farmácia, fast-food. Quantidade de clientes só se você tiver uma base real.'],
+                ['titulo' => 'Dinheiro e cartão', 'texto' => 'Troco, sangria, TEF, PIX no PDV e vale-alimentação. Cite o que você operou.'],
+                ['titulo' => 'Fechamento', 'texto' => 'Conferência da gaveta, relatório do sistema e entrega ao fiscal. Se a diferença era rara, explique a contagem, sem jurar perfeição.'],
+                ['titulo' => 'Ao redor do caixa', 'texto' => 'Empacotamento, recarga, sacola, cartão da loja e chamada de preço divergente. Isso mostra que você não trava a fila.'],
+            ],
+        ],
+        [
+            'id' => 'como-escrever',
+            'titulo' => 'Como escrever o turno sem clichê de simpatia',
+            'paragrafos' => [
+                'Simpatia aparece quando você descreve a fila: chamou o fiscal no preço errado, separou a compra grande, avisou a promoção que o sistema não leu. "Atencioso e rápido" sozinho não entra na comparação com outro caixa.',
+            ],
+            'frases' => [
+                'Operador de caixa de supermercado desde 2022. Registro mercadoria no PDV, faço sangria com o fiscal e fecho a gaveta no fim do turno conferindo dinheiro e cartão.',
+                'Busco a primeira vaga de caixa. No balcão da lanchonete eu anotava pedido, recebia em dinheiro e cartão e conferia o troco antes de entregar.',
+            ],
+            'tabela' => [
+                ['bom' => 'Fechei o caixa com contagem de gaveta e impressão do relatório, e chamei o fiscal quando o valor não batia.', 'ruim' => 'Nunca tive quebra de caixa e sou perfeito com números.'],
+                ['bom' => 'Passei compra de alto volume no sábado e mantive a fila andando, pedindo ajuda no empacotamento.', 'ruim' => 'Dinâmico, sorridente e acostumado com pressão.'],
+                ['bom' => 'Registrei recarga e cartão fidelidade no mesmo atendimento, conforme o script da loja.', 'ruim' => 'Responsável por todas as funções do supermercado.'],
+            ],
+        ],
+    ],
+    'erros' => [
+        ['titulo' => 'Esconder quebra com frase absoluta', 'texto' => '"Nunca errei um centavo" desconfia. Melhor: conferia duas vezes e acionava o fiscal na diferença.'],
+        ['titulo' => 'Currículo de vendedor no lugar do caixa', 'texto' => 'Se a vaga é de frente de caixa, meta de loja não substitui fechamento. Se você fazia os dois, separe os tópicos.'],
+        ['titulo' => 'Disponibilidade falsa', 'texto' => 'Supermercado escala sábado, domingo e feriado. Escreva o turno que você aceita.'],
+        ['titulo' => 'Operador de micro sem dizer o sistema', 'texto' => 'Se você não lembra o nome do PDV, descreva a função: código de barra, pesagem, tecla de desconto com autorização. O nome do sistema entra quando você lembra.'],
+    ],
+    'exemplo' => [
+        'nome' => 'Marcos Oliveira',
+        'contato' => 'Osasco, SP · (11) 95555-4444 · marcos.caixa@email.com',
+        'linha' => 'Operador de caixa de supermercado',
+        'resumo_titulo' => 'Resumo',
+        'resumo' => 'Operador de caixa com foco em agilidade e conferência, habituado a fila de checkout e a fechamento de gaveta no fim do turno.',
+        'experiencias' => [
+            [
+                'cargo' => 'Operador de caixa | Supermercado Exemplo',
+                'periodo' => '2022 — atual',
+                'bullets' => [
+                    'Registrou mercadorias no PDV com atenção a preço e desconto autorizado.',
+                    'Fechou o caixa do turno conferindo dinheiro e relatório do sistema.',
+                    'Vendeu recarga e cartão da loja sem segurar a fila.',
+                ],
+            ],
+        ],
+        'formacao' => [
+            ['curso' => 'Ensino médio completo', 'detalhe' => 'Curso de atendimento ao cliente'],
+        ],
+        'habilidades' => ['Fechamento de caixa', 'Sangria', 'TEF', 'Troco', 'Atendimento de fila'],
+    ],
+    'faqs' => [
+        ['p' => 'O que é sangria de caixa no currículo?', 'r' => 'É a retirada de parte do dinheiro da gaveta durante o expediente, registrada e entregue ao administrativo, para o caixa não ficar com valor alto. Se você fez isso com o fiscal, escreva "sangria conforme o procedimento da loja".'],
+        ['p' => 'Como fazer o currículo de caixa sem experiência?', 'r' => 'Use atendimento em que houve dinheiro: lanchonete, barraca, papelaria da família ou evento. Descreva recebimento e troco. No objetivo, peça a primeira vaga de operador e cite ensino médio e disponibilidade.'],
+        ['p' => 'Precisa saber informática?', 'r' => 'Precisa operar o PDV da loja: código, pagamento e relatório simples. Escritório avançado não é a regra. Se você fez curso de operador de caixa ou de informática básica, coloque.'],
+        ['p' => 'Coloco quebra de caixa?', 'r' => 'Não abra o currículo com um problema. Se a entrevista perguntar, explique a diferença e como você passou a conferir. No texto, mostre o hábito de contar e de chamar o fiscal.'],
+        ['p' => 'Caixa de farmácia usa este modelo?', 'r' => 'Use a página de atendente de farmácia se houver receita, validade e convênio. Este modelo serve para supermercado, loja e restaurante, onde a frente é pagamento e fila.'],
+    ],
+];
+include PARTIALS_PATH . '/pagina-modelo.php';

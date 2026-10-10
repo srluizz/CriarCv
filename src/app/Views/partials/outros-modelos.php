@@ -4,7 +4,7 @@
  * Usa lógica de similaridade e palavras-chave para criar relacionados automaticamente
  */
 
-static $modelosCache = null;
+$modelosCache = $modelosCache ?? null;
 
 if ($modelosCache === null) {
     $configPath = dirname(__DIR__, 3) . '/config/routes.php';
@@ -13,8 +13,7 @@ if ($modelosCache === null) {
     $todasAsRotas = file_exists($configPath) ? include($configPath) : [];
     $arquivosFisicos = glob($diretorioModelos . "*.php");
     
-    $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1);
-    $arquivoPai = basename($trace[0]['file']);
+    $arquivoPai = !empty($currentPage['view']) ? basename($currentPage['view']) : '';
     $slugAtual = str_replace('.php', '', $arquivoPai);
 
     // 1. Quebra o nome do arquivo atual em palavras-chave (ex: "auxiliar-adm" -> ["auxiliar", "adm"])
@@ -31,11 +30,17 @@ if ($modelosCache === null) {
         
         if ($nomeArquivo === $arquivoPai || $nomeArquivo === 'modelos.php') continue;
 
-        $rotaChave = isset($todasAsRotas['modelos/curriculo-' . $slugLoop]) ? 'modelos/curriculo-' . $slugLoop : 'modelos/' . $slugLoop;
+        $rotaChave = null;
+        foreach ($todasAsRotas as $chaveRota => $infoRota) {
+            if (($infoRota['view'] ?? '') === 'modelos/' . $nomeArquivo) {
+                $rotaChave = $chaveRota;
+                break;
+            }
+        }
 
-        if (isset($todasAsRotas[$rotaChave])) {
+        if ($rotaChave !== null) {
             $tituloCompleto = explode('|', $todasAsRotas[$rotaChave]['title'])[0];
-            $labelCurto = str_replace(['Modelo de Currículo para ', 'Modelo de Currículo ', ' Grátis'], '', $tituloCompleto);
+            $labelCurto = str_replace(['Modelo de Currículo para ', 'Modelo de Currículo ', 'Currículo para ', ' Grátis'], '', $tituloCompleto);
             
             $item = [
                 'url' => BASE_URL . '/' . $rotaChave,

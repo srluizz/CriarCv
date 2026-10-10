@@ -37,61 +37,61 @@ return [
     'modelos' => [
         'view'  => 'modelos/modelos.php',
         'title' => 'Modelos de Currículo Prontos e Grátis | Baixe em PDF 2026',
-        'desc'  => 'Encontre os melhores modelos de currículo profissionais 100% grátis. Escolha seu modelo, preencha e baixe em PDF: Primeiro Emprego, Vendas e mais.'
+        'desc'  => 'Escolha o modelo do seu cargo, veja o que escrever e baixe o currículo em PDF grátis. Primeiro emprego, vendas, caixa, estágio e outros.'
     ],
     'modelos/curriculo-primeiro-emprego' => [
         'view'  => 'modelos/primeiro-emprego.php',
         'title' => 'Currículo para Primeiro Emprego Grátis | Baixe em PDF',
-        'desc'  => 'Não tem experiência? Use nosso modelo de currículo para primeiro emprego grátis. Dicas exclusivas para destacar suas habilidades e baixar em PDF.'
+        'desc'  => 'Currículo para primeiro emprego sem carteira assinada: o que escrever, objetivo, escola e um exemplo em PDF para adaptar.'
     ],
     'modelos/curriculo-auxiliar-administrativo' => [
         'view'  => 'modelos/auxiliar-administrativo.php',
         'title' => 'Currículo para Auxiliar Administrativo Grátis | Baixe em PDF',
-        'desc'  => 'Baixe o modelo de currículo para auxiliar administrativo perfeito. Otimizado para RH, com habilidades mais buscadas e pronto para exportar em PDF.'
+        'desc'  => 'O que colocar no currículo de auxiliar administrativo: contas, arquivo, Excel e um exemplo em PDF para você adaptar.'
     ],
     'modelos/curriculo-jovem-aprendiz' => [
         'view'  => 'modelos/jovem-aprendiz.php',
         'title' => 'Currículo para Jovem Aprendiz 2026 | Grátis em PDF',
-        'desc'  => 'Crie seu currículo de Jovem Aprendiz em minutos. Guia completo com modelo pronto para baixar e dicas de como conseguir sua primeira vaga.'
+        'desc'  => 'Currículo de jovem aprendiz: idade, escola, horário da lei e um exemplo para quem ainda está no ensino médio.'
     ],
     'modelos/curriculo-vendedor' => [
         'view'  => 'modelos/vendedor.php',
         'title' => 'Currículo para Vendedor e Balconista Grátis | Baixe em PDF',
-        'desc'  => 'Melhore suas vendas já no currículo! Baixe nosso modelo de currículo para vendedor com foco em resultados, metas e habilidades comerciais.'
+        'desc'  => 'Currículo de vendedor com meta, atendimento e resultado. Veja o que escrever e um exemplo de loja para adaptar.'
     ],
     'modelos/curriculo-recepcionista' => [
         'view'  => 'modelos/recepcionista.php',
         'title' => 'Currículo para Recepcionista Grátis | Baixe em PDF!',
-        'desc'  => 'Modelo de currículo para recepcionista pronto para baixar. Ideal para clínicas, hotéis e recepção comercial. Habilidades essenciais inclusas.'
+        'desc'  => 'Currículo de recepcionista para clínica, hotel ou escritório: agenda, telefone e um exemplo de clínica em PDF.'
     ],
     'modelos/curriculo-atendente-de-farmacia' => [
         'view'  => 'modelos/farmacia.php',
         'title' => 'Currículo para Atendente de Farmácia Grátis | Baixe em PDF',
-        'desc'  => 'Baixe o melhor modelo de currículo para atendente de farmácia. Destaque seus cursos, habilidades técnicas e atendimento ao cliente de forma profissional.'
+        'desc'  => 'Currículo de atendente de farmácia: balcão, validade, convênio e o limite entre atendente e farmacêutico.'
     ],
     'modelos/curriculo-motorista' => [
         'view'  => 'modelos/motorista.php',
         'title' => 'Currículo para Motorista e Entregador Grátis | Baixe em PDF',
-        'desc'  => 'Modelo ideal para motoristas (CNH A, B, C, D ou E) e entregadores. Crie um currículo profissional pronto para imprimir ou enviar via WhatsApp.'
+        'desc'  => 'Currículo de motorista com categoria da CNH, EAR e rota. Veja o que escrever e um exemplo de entrega urbana.'
     ],
     'modelos/curriculo-operador-de-caixa' => [
         'view'  => 'modelos/operador-caixa.php',
         'title' => 'Currículo para Operador de Caixa Grátis | Baixe em PDF',
-        'desc'  => 'Baixe o modelo de currículo para operador de caixa mais utilizado no varejo. Exemplos de objetivos e habilidades para supermercados e lojas.'
+        'desc'  => 'Currículo de operador de caixa: fechamento, sangria, fila e um exemplo de supermercado para adaptar.'
     ],
     'modelos/curriculo-servicos-gerais' => [
         'view'  => 'modelos/servicos-gerais.php',
         'title' => 'Currículo para Serviços Gerais e Limpeza | Baixe em PDF',
-        'desc'  => 'Modelo de currículo simples e direto para auxiliar de serviços gerais e limpeza. Pronto para preencher, baixar em PDF e entregar nas empresas.'
+        'desc'  => 'Currículo de serviços gerais e limpeza: o que escrever sobre posto, turno e equipamento, com exemplo direto.'
     ],
     'modelos/curriculo-estagio' => [
         'view'  => 'modelos/estagio.php',
         'title' => 'Currículo para Estágio 2026 | Modelo Grátis em PDF',
-        'desc'  => 'Comece sua carreira com o pé direito. Modelo de currículo para estágio focado em formação acadêmica, cursos e potencial profissional. Baixe em PDF.'
+        'desc'  => 'Currículo de estágio com semestre, previsão de formatura e projeto da faculdade. Exemplo em administração para adaptar.'
     ],
     'modelos/curriculo-vigilante-e-porteiro' => [
         'view'  => 'modelos/vigilante.php',
         'title' => 'Currículo para Vigilante e Porteiro Grátis | Baixe em PDF',
-        'desc'  => 'Destaque seus cursos de formação e experiência em segurança. Modelo de currículo pronto para vigilantes e porteiros. Baixe agora gratuitamente.'
+        'desc'  => 'Currículo de vigilante e de porteiro: CNV, portaria e ronda. Veja a diferença entre os cargos e um exemplo.'
     ],
 ];

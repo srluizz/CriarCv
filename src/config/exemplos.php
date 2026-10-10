@@ -1,0 +1,175 @@
+<?php
+
+return [
+    'curriculo-primeiro-emprego' => [
+        'cargo' => 'Auxiliar de Escritório',
+        'nome' => 'João Silva Sauro',
+        'email' => 'joao.silva@email.com',
+        'tel' => '(11) 98765-4321',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => 'linkedin.com/in/joaosilva',
+        'resumo' => 'Busco minha primeira oportunidade profissional como Auxiliar de Escritório. Sou proativo, possuo facilidade de aprendizado e desejo contribuir com a organização e suporte administrativo da empresa.',
+        'skills' => 'Pacote Office (Excel e Word), Inglês Básico, Atendimento ao Cliente, Voluntariado',
+        'exp' => [],
+        'edu' => [
+            ['t1' => 'Escola Estadual Professor José', 't2' => 'Ensino Médio Completo | 12/2025', 'desc' => 'Concluído em dezembro de 2025.'],
+        ],
+    ],
+    'curriculo-auxiliar-administrativo' => [
+        'cargo' => 'Auxiliar Administrativo',
+        'nome' => 'Mariana Oliveira',
+        'email' => '',
+        'tel' => '(11) 99999-8888',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => 'linkedin.com/in/mariana-adm',
+        'resumo' => 'Profissional com 3 anos de experiência em suporte administrativo e financeiro. Experiência em organização de fluxo de caixa e atendimento a fornecedores. Domínio de Microsoft 365 e sistemas de gestão.',
+        'skills' => 'Excel Avançado, Inglês Técnico, Contas a Pagar e Receber, Organização de Agenda',
+        'exp' => [
+            ['t1' => 'Empresa Exemplo', 't2' => 'Assistente de Escritório | 2023 - Atual', 'desc' => "Gestão de contas a pagar e receber via ERP.\nRedução de 15% na inadimplência através de cobrança ativa.\nOrganização de agendas e logística de viagens da diretoria."],
+        ],
+        'edu' => [
+            ['t1' => 'Universidade Mackenzie', 't2' => 'Administração | Cursando', 'desc' => ''],
+        ],
+    ],
+    'curriculo-jovem-aprendiz' => [
+        'cargo' => 'Jovem Aprendiz',
+        'nome' => 'Ricardo Almeida',
+        'email' => 'ricardo.aprendiz@email.com',
+        'tel' => '(11) 90000-0000',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Estudante focado em iniciar a carreira profissional através do programa Jovem Aprendiz, visando auxiliar nas rotinas da empresa e aprender processos administrativos e operacionais.',
+        'skills' => 'Pacote Office (Word e Excel Básico), Digitação, Atendimento Telefônico, Inglês Iniciante',
+        'exp' => [],
+        'edu' => [
+            ['t1' => 'Colégio Estadual Vila Yara', 't2' => 'Ensino Médio (2º Ano) | Previsão 12/2026', 'desc' => 'Cursando no período noturno. Voluntariado em eventos escolares e workshop de postura profissional.'],
+        ],
+    ],
+    'curriculo-vendedor' => [
+        'cargo' => 'Vendedor',
+        'nome' => 'Lucas Ferreira',
+        'email' => 'lucas.vendas@email.com',
+        'tel' => '(11) 98888-7777',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Vendedor com 5 anos de experiência no varejo de tecnologia. Atendimento consultivo e foco em meta de faturamento, com histórico de aumento de 20% no ticket médio mensal.',
+        'skills' => 'SPIN Selling, Inglês Comercial, CRM, PDV, Pós-venda',
+        'exp' => [
+            ['t1' => 'Loja de Tecnologia Global', 't2' => 'Vendedor Sênior | 03/2021 - Atual', 'desc' => "Eleito vendedor do mês por 4 vezes consecutivas em 2025.\nGestão de carteira com mais de 200 clientes ativos no CRM.\nAumento de 15% na taxa de fidelização com pós-venda."],
+        ],
+        'edu' => [
+            ['t1' => 'Centro Universitário FIEO', 't2' => 'Gestão Comercial | 2022', 'desc' => 'Concluído em 2022.'],
+        ],
+    ],
+    'curriculo-recepcionista' => [
+        'cargo' => 'Recepcionista',
+        'nome' => 'Fernanda Souza',
+        'email' => 'fernanda.recepcao@email.com',
+        'tel' => '(11) 97777-6666',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Atuar como recepcionista, aplicando experiência em atendimento ao público e organização administrativa para oferecer suporte eficiente e cordial a clientes e colaboradores.',
+        'skills' => 'Inglês Intermediário, Pacote Office, PABX, Agenda Médica, Atendimento',
+        'exp' => [
+            ['t1' => 'Clínica Bem-Estar', 't2' => 'Recepcionista Pleno | 05/2022 - Atual', 'desc' => "Atendimento de mais de 40 pacientes por dia, com triagem e check-in.\nGestão da agenda médica via sistema iClinic e Google Calendar.\nControle de estoque de materiais de escritório e recepção."],
+        ],
+        'edu' => [
+            ['t1' => 'Universidade Nove de Julho (UNINOVE)', 't2' => 'Secretariado Executivo | 2021', 'desc' => 'Tecnólogo concluído em 2021.'],
+        ],
+    ],
+    'curriculo-atendente-de-farmacia' => [
+        'cargo' => 'Atendente de Farmácia',
+        'nome' => 'Julia Mendes',
+        'email' => 'julia.farmacia@email.com',
+        'tel' => '(11) 91234-5678',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Atendente de farmácia com foco em organização e atendimento humanizado, buscando cuidar das rotinas de vendas e estoque da drogaria.',
+        'skills' => 'Leitura de Prescrições, PDV e Caixa, Vendas de Dermocosméticos, Farmácia Popular',
+        'exp' => [
+            ['t1' => 'Farmácia Preço Baixo', 't2' => 'Atendente Pleno | 01/2023 - 01/2026', 'desc' => "Conferência de receitas controladas.\nOperação de caixa e lançamentos em programas de benefício em medicamentos.\nOrganização de uma seção com mais de 500 itens."],
+        ],
+        'edu' => [
+            ['t1' => 'SENAC', 't2' => 'Atendente de Farmácia', 'desc' => 'Ensino médio completo.'],
+        ],
+    ],
+    'curriculo-motorista' => [
+        'cargo' => 'Motorista',
+        'nome' => 'Roberto Silva',
+        'email' => '',
+        'tel' => '(11) 98888-7777',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Motorista profissional com experiência em rotas metropolitanas e foco em direção segura. CNH categoria D com atividade remunerada (EAR).',
+        'skills' => 'CNH D com EAR, Direção Defensiva, Roteirização, Atendimento ao Cliente',
+        'exp' => [
+            ['t1' => 'Transportadora Veloz', 't2' => 'Motorista Entregador | 2021 - Atual', 'desc' => "Média de 25 entregas diárias.\nUso de sistemas de roteirização e leitura de notas fiscais.\nManutenção preventiva e limpeza do veículo."],
+        ],
+        'edu' => [],
+    ],
+    'curriculo-operador-de-caixa' => [
+        'cargo' => 'Operador de Caixa',
+        'nome' => 'Marcos Oliveira',
+        'email' => 'marcos.caixa@email.com',
+        'tel' => '(11) 95555-4444',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Operador de caixa com foco em agilidade e exatidão financeira, buscando atendimento rápido e cordial nas rotinas de check-out.',
+        'skills' => 'Fechamento de Caixa, Máquina de Cartão, Troco, Atendimento ao Cliente',
+        'exp' => [
+            ['t1' => 'Supermercado Exemplo', 't2' => 'Operador de Caixa | 2022 - Atual', 'desc' => "Registro de mercadorias com baixo índice de erros.\nFechamento de caixa diário sem divergência de valores.\nVenda de recargas e cartões fidelidade."],
+        ],
+        'edu' => [
+            ['t1' => 'Ensino Médio Completo', 't2' => 'Curso de Atendimento ao Cliente', 'desc' => ''],
+        ],
+    ],
+    'curriculo-servicos-gerais' => [
+        'cargo' => 'Auxiliar de Serviços Gerais',
+        'nome' => 'Antônio Rodrigues',
+        'email' => '',
+        'tel' => '(11) 92222-3333',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Auxiliar de serviços gerais focado em organização e zelo pelo patrimônio. Pontual, proativo e com experiência em locais de grande circulação. Disponibilidade para início imediato.',
+        'skills' => 'Enceradeira e Lavadora, Diluição de Produtos, Almoxarifado, NR-32',
+        'exp' => [
+            ['t1' => 'Condomínio Horizonte', 't2' => 'Agente de Limpeza | 2020 - 2025', 'desc' => "Limpeza de hall, banheiros e elevadores.\nControle de estoque de materiais de limpeza.\nApoio em jardinagem e pintura básica."],
+        ],
+        'edu' => [
+            ['t1' => 'Ensino Fundamental Completo', 't2' => 'NR-32 | Prevenção de Acidentes', 'desc' => ''],
+        ],
+    ],
+    'curriculo-estagio' => [
+        'cargo' => 'Estágio em Administração',
+        'nome' => 'Luiza Ferreira',
+        'email' => 'luiza.estagio@email.com',
+        'tel' => '(11) 97777-5555',
+        'cidade' => 'São Paulo, SP',
+        'linkedin' => '',
+        'resumo' => 'Estudante de Administração, no 4º semestre, em busca de estágio na área de processos para aplicar conhecimentos de viabilidade financeira e organização.',
+        'skills' => 'Excel Avançado, Google Workspace, Trello, Inglês Intermediário, Power BI',
+        'exp' => [
+            ['t1' => 'Projeto interdisciplinar', 't2' => 'Otimização de Processos | Acadêmico', 'desc' => 'Plano de negócio para startup, com análise de viabilidade financeira e mapeamento de fluxo de caixa.'],
+            ['t1' => 'Universidade Estácio', 't2' => 'Monitoria de Matemática Financeira', 'desc' => 'Apoio a alunos do 1º semestre e suporte ao professor titular.'],
+        ],
+        'edu' => [
+            ['t1' => 'Universidade Estácio | Campus Interlagos', 't2' => 'Administração | 4º semestre, previsão 12/2027', 'desc' => ''],
+        ],
+    ],
+    'curriculo-vigilante-e-porteiro' => [
+        'cargo' => 'Vigilante',
+        'nome' => 'Carlos Alberto Lima',
+        'email' => '',
+        'tel' => '(11) 96666-5555',
+        'cidade' => 'Osasco, SP',
+        'linkedin' => '',
+        'resumo' => 'Profissional de segurança com 5 anos de experiência, especializado em vigilância de centros comerciais e operação de CFTV. CNV ativa e curso de vigilante em dia.',
+        'skills' => 'CFTV, Rádio HT, Primeiros Socorros, Combate a Incêndio, Controle de Acesso',
+        'exp' => [
+            ['t1' => 'Segurança Forte LTDA', 't2' => 'Vigilante Patrimonial | 2021 - 2025', 'desc' => "Rondas preventivas e monitoramento de alarmes.\nControle de entrada e saída de veículos e materiais.\nRelatórios diários de ocorrências."],
+        ],
+        'edu' => [
+            ['t1' => 'Academia de formação de vigilante', 't2' => 'Curso de Vigilante | Reciclagem 2025', 'desc' => 'Extensão em segurança pessoal.'],
+        ],
+    ],
+];

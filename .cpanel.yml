@@ -2,6 +2,8 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home3/jogoscla/criarcv.online/
     - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -f public/.htaccess $DEPLOYPATH/public/.htaccess
+    - /bin/cp -f public/robots.txt $DEPLOYPATH/public/robots.txt
 
 
 

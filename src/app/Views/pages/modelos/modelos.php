@@ -64,6 +64,27 @@ $posicao = 1;
 
     </div>
 
+    <section class="max-w-3xl mx-auto mt-20 text-slate-700 leading-relaxed">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Como escolher o modelo</h2>
+        <p class="mb-4">Cada página explica a rotina daquele cargo, os erros que fazem o recrutador pular o PDF e um exemplo fictício. O botão do guia abre o gerador com esse exemplo preenchido. Troque nome, telefone, empresas e números pelos seus antes de baixar.</p>
+        <p class="mb-4">Se você nunca trabalhou, comece por primeiro emprego, jovem aprendiz ou estágio. Se a vaga mistura duas funções, use o cargo do anúncio no título e puxe só as tarefas que você fazia de verdade.</p>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4 mt-10">Perguntas frequentes</h2>
+        <div class="space-y-3">
+            <details class="bg-white border border-slate-200 rounded-xl p-5">
+                <summary class="font-bold cursor-pointer">O PDF é gratuito?</summary>
+                <p class="mt-3">Sim. Você preenche no navegador e baixa o PDF sem cadastro. Os dados do currículo não ficam salvos numa conta.</p>
+            </details>
+            <details class="bg-white border border-slate-200 rounded-xl p-5">
+                <summary class="font-bold cursor-pointer">Posso usar o modelo de outro cargo?</summary>
+                <p class="mt-3">Pode abrir qualquer exemplo, mas o recrutador compara o texto com o anúncio. Auxiliar administrativo, caixa e serviços gerais contam rotinas diferentes. Escolha a página da vaga e adapte.</p>
+            </details>
+            <details class="bg-white border border-slate-200 rounded-xl p-5">
+                <summary class="font-bold cursor-pointer">O arquivo serve para WhatsApp e e-mail?</summary>
+                <p class="mt-3">Sim. O download é um PDF de uma página, no formato que empresas pedem no e-mail, no WhatsApp e nos portais de vaga.</p>
+            </details>
+        </div>
+    </section>
+
     <section class="mt-24 max-w-4xl mx-auto bg-slate-900 rounded-3xl p-12 text-center text-white shadow-2xl">
         <h2 class="text-3xl font-bold mb-6 text-white">Não encontrou o seu cargo?</h2>
         <p class="text-slate-400 mb-10 text-lg">Nosso gerador de currículos é flexível e permite criar layouts para qualquer profissão em segundos.</p>
@@ -76,10 +97,33 @@ $posicao = 1;
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Lista de Modelos de Currículo Profissionais",
-    "description": "Uma coleção de modelos de currículo otimizados para diferentes cargos e níveis de experiência.",
-    "url": "<?= BASE_URL ?>/modelos",
-    "itemListElement": <?= json_encode($jsonItems, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
+    "@graph": [
+        {
+            "@type": "ItemList",
+            "name": "Modelos de currículo por cargo",
+            "url": "<?= BASE_URL ?>/modelos",
+            "itemListElement": <?= json_encode($jsonItems, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?>
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "O PDF é gratuito?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Sim. Você preenche no navegador e baixa o PDF sem cadastro." }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Posso usar o modelo de outro cargo?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Pode abrir qualquer exemplo, mas o recrutador compara o texto com o anúncio. Escolha a página da vaga e adapte." }
+                },
+                {
+                    "@type": "Question",
+                    "name": "O arquivo serve para WhatsApp e e-mail?",
+                    "acceptedAnswer": { "@type": "Answer", "text": "Sim. O download é um PDF de uma página." }
+                }
+            ]
+        }
+    ]
 }
 </script>

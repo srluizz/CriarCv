@@ -64,6 +64,11 @@
             
             <div class="lg:col-span-5 space-y-8 print:hidden">
                 <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl shadow-slate-200/60 border border-slate-100">
+                    <?php if (!empty($exemploCurriculo)): ?>
+                    <div class="mb-8 rounded-2xl border border-blue-200 bg-blue-50 px-5 py-4 text-sm text-blue-950">
+                        Exemplo de <strong><?= htmlspecialchars($exemploCurriculo['cargo'], ENT_QUOTES, 'UTF-8') ?></strong> carregado. Troque o nome, o contato e os textos pelos seus antes de baixar o PDF.
+                    </div>
+                    <?php endif; ?>
                     <div class="flex items-center justify-between mb-10">
                         <div>
                             <h2 class="text-3xl font-black text-slate-900 tracking-tighter leading-none">Editor Profissional</h2>
@@ -223,6 +228,16 @@
 
 <script>
 let state = { exp: [], edu: [] };
+let itemSeq = 1;
+const exemploInicial = <?= json_encode($exemploCurriculo ?? null, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
+
+function escapeHtml(value) {
+    return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
 
 function updatePreview() {
     document.getElementById('out_nome').innerText = document.getElementById('in_nome').value || 'Seu Nome Completo';
@@ -247,8 +262,13 @@ function updatePreview() {
     renderOutputList('edu');
 }
 
-function addItem(type) {
-    state[type].push({ id: Date.now(), t1: '', t2: '', desc: '' });
+function addItem(type, data) {
+    state[type].push({
+        id: itemSeq++,
+        t1: data?.t1 || '',
+        t2: data?.t2 || '',
+        desc: data?.desc || ''
+    });
     renderInputs();
     updatePreview();
 }
@@ -271,9 +291,9 @@ function renderInputs() {
         container.innerHTML = state[type].map(item => `
             <div class="p-6 bg-slate-50 border border-slate-200 rounded-[2rem] relative space-y-4 group hover:border-blue-400 hover:bg-white transition-all shadow-sm hover:shadow-md">
                 <div onclick="removeItem('${type}', ${item.id})" class="btn-remove">✕</div>
-                <input type="text" placeholder="${type === 'exp' ? 'Empresa / Organização' : 'Instituição de Ensino'}" oninput="updateItem('${type}', ${item.id}, 't1', this.value)" value="${item.t1}" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm font-bold shadow-sm">
-                <input type="text" placeholder="${type === 'exp' ? 'Seu Cargo | Ex: 2022 - Atual' : 'Nome do Curso | Ano de Conclusão'}" oninput="updateItem('${type}', ${item.id}, 't2', this.value)" value="${item.t2}" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-xs text-blue-600 font-semibold shadow-sm">
-                <textarea placeholder="Principais conquistas e responsabilidades..." oninput="updateItem('${type}', ${item.id}, 'desc', this.value)" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-xs h-20 resize-none shadow-sm leading-relaxed">${item.desc}</textarea>
+                <input type="text" placeholder="${type === 'exp' ? 'Empresa / Organização' : 'Instituição de Ensino'}" oninput="updateItem('${type}', ${item.id}, 't1', this.value)" value="${escapeHtml(item.t1)}" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-sm font-bold shadow-sm">
+                <input type="text" placeholder="${type === 'exp' ? 'Seu Cargo | Ex: 2022 - Atual' : 'Nome do Curso | Ano de Conclusão'}" oninput="updateItem('${type}', ${item.id}, 't2', this.value)" value="${escapeHtml(item.t2)}" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-xs text-blue-600 font-semibold shadow-sm">
+                <textarea placeholder="Principais conquistas e responsabilidades..." oninput="updateItem('${type}', ${item.id}, 'desc', this.value)" class="w-full p-3 bg-white border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none text-xs h-20 resize-none shadow-sm leading-relaxed">${escapeHtml(item.desc)}</textarea>
             </div>
         `).join('');
     });
@@ -395,7 +415,36 @@ function copyPix() {
 });
 }
 
+function preencherExemplo(exemplo) {
+    const campos = {
+        in_nome: exemplo.nome,
+        in_cargo: exemplo.cargo,
+        in_email: exemplo.email,
+        in_tel: exemplo.tel,
+        in_linkedin: exemplo.linkedin,
+        in_github: exemplo.github,
+        in_cidade: exemplo.cidade,
+        in_resumo: exemplo.resumo,
+        in_skills: exemplo.skills
+    };
+
+    Object.entries(campos).forEach(([id, valor]) => {
+        const campo = document.getElementById(id);
+        if (campo) campo.value = valor || '';
+    });
+
+    state.exp = [];
+    state.edu = [];
+    (exemplo.exp || []).forEach(item => addItem('exp', item));
+    (exemplo.edu || []).forEach(item => addItem('edu', item));
+    updatePreview();
+}
+
 window.onload = () => {
+    if (exemploInicial) {
+        preencherExemplo(exemploInicial);
+        return;
+    }
     addItem('exp');
     addItem('edu');
 };
